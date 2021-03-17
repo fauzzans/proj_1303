@@ -1,12 +1,85 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Web extends CI_Controller {
+class Web extends CI_Controller
+{
 
 	public function index()
 	{
 		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
 		$this->load->view('web/index', $data);
+	}
+
+	public function sejarah()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/sejarah', $data);
+	}
+
+	public function pimpinan()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/pimpinan', $data);
+	}
+
+	public function visimisi()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/visimisi', $data);
+	}
+
+	public function berita()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/berita', $data);
+	}
+
+	public function berita_post()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/berita_post', $data);
+	}
+
+	public function kegiatan()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/kegiatan', $data);
+	}
+
+	public function kegiatan_post()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/kegiatan_post', $data);
+	}
+
+	public function galeri()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/galeri', $data);
+	}
+
+	public function dinniyah()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/dinniyah', $data);
+	}
+
+	public function mts()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/mts', $data);
+	}
+
+	public function ma()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/ma', $data);
+	}
+
+	public function sma()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/sma', $data);
 	}
 
 	public function pendaftaran()
@@ -40,11 +113,11 @@ class Web extends CI_Controller {
 			$this->db->order_by('id_siswa', 'DESC');
 			$sql 		= $this->db->get('tbl_siswa');
 			if ($sql->num_rows() == 0) {
-			  $no_pendaftaran   = "PSB18004001";
-			}else{
-			  $noUrut 	 	= substr($sql->row()->no_pendaftaran, 8, 3);
-			  $noUrut++;
-			  $no_pendaftaran	  = "PSB18004".sprintf("%03s", $noUrut);
+				$no_pendaftaran   = "PSB18004001";
+			} else {
+				$noUrut 	 	= substr($sql->row()->no_pendaftaran, 8, 3);
+				$noUrut++;
+				$no_pendaftaran	  = "PSB18004" . sprintf("%03s", $noUrut);
 			}
 
 			$nis							= $this->input->post('nis');
@@ -53,7 +126,7 @@ class Web extends CI_Controller {
 			$nama_lengkap			= $this->input->post('nama_lengkap');
 			$jk								= $this->input->post('jk');
 			$tempat_lahir			= $this->input->post('tempat_lahir');
-			$tgl_lahir				= $this->input->post('tgl_lahir')."-".$this->input->post('bln_lahir')."-".$this->input->post('thn_lahir');
+			$tgl_lahir				= $this->input->post('tgl_lahir') . "-" . $this->input->post('bln_lahir') . "-" . $this->input->post('thn_lahir');
 			$agama						= $this->input->post('agama');
 			$status_keluarga	= $this->input->post('status_keluarga');
 			$alamat_siswa			= $this->input->post('alamat_siswa');
@@ -83,156 +156,154 @@ class Web extends CI_Controller {
 			$tgl_siswa				= $this->Model_data->date('waktu_default');
 
 			if ($_POST['total_nilai'] < 75) {
-				$this->session->set_flashdata('msg',
+				$this->session->set_flashdata(
+					'msg',
 					'
 					<div class="alert alert-warning alert-dismissible" role="alert">
 						 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 							 <span aria-hidden="true">&times;&nbsp; &nbsp;</span>
 						 </button>
-						 <strong>Gagal Mendaftar PPDB Online!</strong> Maaf <b>'.$nama_lengkap.'</b> tidak bisa mendaftar PPDB dikarenakan Total nilai Rata-Rata Rapor kurang dari 75. Terimakasih.
+						 <strong>Gagal Mendaftar PPDB Online!</strong> Maaf <b>' . $nama_lengkap . '</b> tidak bisa mendaftar PPDB dikarenakan Total nilai Rata-Rata Rapor kurang dari 75. Terimakasih.
 					</div>'
 				);
 				redirect('pendaftaran');
 			}
 
-					$data = array(
-						'no_pendaftaran'		=> $no_pendaftaran,
-						'password'				  => $nisn,
-						'nis'					  		=> $nis,
-						'nisn'				  		=> $nisn,
-						'nik'				  			=> $nik,
-						'nama_lengkap'			=> $nama_lengkap,
-						'jk'				  			=> $jk,
-						'tempat_lahir'			=> $tempat_lahir,
-						'tgl_lahir'				  => $tgl_lahir,
-						'agama'				  	  => $agama,
-						'status_keluarga'		=> $status_keluarga,
-						'alamat_siswa'			=> $alamat_siswa,
-						'no_hp_siswa'				=> $no_hp_siswa,
-						'nama_ayah'				  => $nama_ayah,
-						'pdd_ayah'				  => $pdd_ayah,
-						'pekerjaan_ayah'		=> $pekerjaan_ayah,
-						'penghasilan_ayah'	=> $penghasilan_ayah,
-						'no_hp_ayah'				=> $no_hp_ayah,
-						'nama_ibu'				  => $nama_ibu,
-						'pdd_ibu'				  	=> $pdd_ibu,
-						'pekerjaan_ibu'			=> $pekerjaan_ibu,
-						'penghasilan_ibu'		=> $penghasilan_ibu,
-						'no_hp_ibu'				  => $no_hp_ibu,
-						'nama_wali'				  => $nama_wali,
-						'pdd_wali'				  => $pdd_wali,
-						'pekerjaan_wali'		=> $pekerjaan_wali,
-						'penghasilan_wali'	=> $penghasilan_wali,
-						'no_hp_wali'				=> $no_hp_wali,
-						'npsn_sekolah'  	  => $npsn,
-						'nama_sekolah'			=> $nama_sekolah,
-						'status_sekolah'		=> $status_sekolah,
-						'model_un'				  => $model_un,
-						'alamat_sekolah'		=> $alamat_sekolah,
-						'thn_lulus'				  => $thn_lulus,
-						'rayonisasi'				=> $rayonisasi,
-						'tgl_siswa'				  => $tgl_siswa
-					);
-					$this->db->insert('tbl_siswa',$data);
+			$data = array(
+				'no_pendaftaran'		=> $no_pendaftaran,
+				'password'				  => $nisn,
+				'nis'					  		=> $nis,
+				'nisn'				  		=> $nisn,
+				'nik'				  			=> $nik,
+				'nama_lengkap'			=> $nama_lengkap,
+				'jk'				  			=> $jk,
+				'tempat_lahir'			=> $tempat_lahir,
+				'tgl_lahir'				  => $tgl_lahir,
+				'agama'				  	  => $agama,
+				'status_keluarga'		=> $status_keluarga,
+				'alamat_siswa'			=> $alamat_siswa,
+				'no_hp_siswa'				=> $no_hp_siswa,
+				'nama_ayah'				  => $nama_ayah,
+				'pdd_ayah'				  => $pdd_ayah,
+				'pekerjaan_ayah'		=> $pekerjaan_ayah,
+				'penghasilan_ayah'	=> $penghasilan_ayah,
+				'no_hp_ayah'				=> $no_hp_ayah,
+				'nama_ibu'				  => $nama_ibu,
+				'pdd_ibu'				  	=> $pdd_ibu,
+				'pekerjaan_ibu'			=> $pekerjaan_ibu,
+				'penghasilan_ibu'		=> $penghasilan_ibu,
+				'no_hp_ibu'				  => $no_hp_ibu,
+				'nama_wali'				  => $nama_wali,
+				'pdd_wali'				  => $pdd_wali,
+				'pekerjaan_wali'		=> $pekerjaan_wali,
+				'penghasilan_wali'	=> $penghasilan_wali,
+				'no_hp_wali'				=> $no_hp_wali,
+				'npsn_sekolah'  	  => $npsn,
+				'nama_sekolah'			=> $nama_sekolah,
+				'status_sekolah'		=> $status_sekolah,
+				'model_un'				  => $model_un,
+				'alamat_sekolah'		=> $alamat_sekolah,
+				'thn_lulus'				  => $thn_lulus,
+				'rayonisasi'				=> $rayonisasi,
+				'tgl_siswa'				  => $tgl_siswa
+			);
+			$this->db->insert('tbl_siswa', $data);
 
-					for ($i=1; $i <=5 ; $i++) {
-						if ($i == 1) {
-							$mapel = 'Ilmu Pengetahuan Alam (IPA)';
-							$smstr = 'ipa';
-						}elseif ($i == 2) {
-							$mapel = 'Ilmu Pengetahuan Sosial (IPS)';
-							$smstr = 'ips';
-						}elseif ($i == 3) {
-							$mapel = 'Matematika';
-							$smstr = 'mtk';
-						}elseif ($i == 4) {
-							$mapel = 'Bahasa Indonesia';
-							$smstr = 'ind';
-						}elseif ($i == 5) {
-							$mapel = 'Bahasa Inggris';
-							$smstr = 'ing';
-						}
-						$data2 = array(
-							'mapel'				 		=> $mapel,
-							'semester1'		 		=> $this->input->post($smstr."1"),
-							'semester2'				=> $this->input->post($smstr."2"),
-							'semester3'				=> $this->input->post($smstr."3"),
-							'semester4'				=> $this->input->post($smstr."4"),
-							'semester5'				=> $this->input->post($smstr."5"),
-							'rata_rata_nilai'	=> $this->input->post("nilai_".$smstr),
-							'no_pendaftaran'	=> $no_pendaftaran
-						);
-						$this->db->insert('tbl_rapor',$data2);
-					}
+			for ($i = 1; $i <= 5; $i++) {
+				if ($i == 1) {
+					$mapel = 'Ilmu Pengetahuan Alam (IPA)';
+					$smstr = 'ipa';
+				} elseif ($i == 2) {
+					$mapel = 'Ilmu Pengetahuan Sosial (IPS)';
+					$smstr = 'ips';
+				} elseif ($i == 3) {
+					$mapel = 'Matematika';
+					$smstr = 'mtk';
+				} elseif ($i == 4) {
+					$mapel = 'Bahasa Indonesia';
+					$smstr = 'ind';
+				} elseif ($i == 5) {
+					$mapel = 'Bahasa Inggris';
+					$smstr = 'ing';
+				}
+				$data2 = array(
+					'mapel'				 		=> $mapel,
+					'semester1'		 		=> $this->input->post($smstr . "1"),
+					'semester2'				=> $this->input->post($smstr . "2"),
+					'semester3'				=> $this->input->post($smstr . "3"),
+					'semester4'				=> $this->input->post($smstr . "4"),
+					'semester5'				=> $this->input->post($smstr . "5"),
+					'rata_rata_nilai'	=> $this->input->post("nilai_" . $smstr),
+					'no_pendaftaran'	=> $no_pendaftaran
+				);
+				$this->db->insert('tbl_rapor', $data2);
+			}
 
-					for ($i=1; $i <=7 ; $i++) {
-						if ($i == 1) {
-							$mapel = 'Pendidikan Agama';
-							$nilai = 'agama';
-						}elseif ($i == 2) {
-							$mapel = 'PKN';
-							$nilai = 'pkn';
-						}elseif ($i == 3) {
-							$mapel = 'Bahasa Indonesia';
-							$nilai = 'ind';
-						}elseif ($i == 4) {
-							$mapel = 'Bahasa Inggris';
-							$nilai = 'ing';
-						}elseif ($i == 5) {
-							$mapel = 'Matematika';
-							$nilai = 'mtk';
-						}elseif ($i == 6) {
-							$mapel = 'Ilmu Pengetahuan Alam (IPA)';
-							$nilai = 'ipa';
-						}elseif ($i == 7) {
-							$mapel = 'Ilmu Pengetahuan Sosial (IPS)';
-							$nilai = 'ipa';
-						}
-						$data3 = array(
-							'mapel_usbn'			=> $mapel,
-							'nilai_usbn'			=> $this->input->post("usbn_".$nilai),
-							'no_pendaftaran'	=> $no_pendaftaran
-						);
-						$this->db->insert('tbl_nilai_usbn',$data3);
-					}
+			for ($i = 1; $i <= 7; $i++) {
+				if ($i == 1) {
+					$mapel = 'Pendidikan Agama';
+					$nilai = 'agama';
+				} elseif ($i == 2) {
+					$mapel = 'PKN';
+					$nilai = 'pkn';
+				} elseif ($i == 3) {
+					$mapel = 'Bahasa Indonesia';
+					$nilai = 'ind';
+				} elseif ($i == 4) {
+					$mapel = 'Bahasa Inggris';
+					$nilai = 'ing';
+				} elseif ($i == 5) {
+					$mapel = 'Matematika';
+					$nilai = 'mtk';
+				} elseif ($i == 6) {
+					$mapel = 'Ilmu Pengetahuan Alam (IPA)';
+					$nilai = 'ipa';
+				} elseif ($i == 7) {
+					$mapel = 'Ilmu Pengetahuan Sosial (IPS)';
+					$nilai = 'ipa';
+				}
+				$data3 = array(
+					'mapel_usbn'			=> $mapel,
+					'nilai_usbn'			=> $this->input->post("usbn_" . $nilai),
+					'no_pendaftaran'	=> $no_pendaftaran
+				);
+				$this->db->insert('tbl_nilai_usbn', $data3);
+			}
 
-					for ($i=1; $i <=4 ; $i++) {
-						if ($i == 1) {
-							$mapel = 'Ilmu Pengetahuan Alam (IPA)';
-							$nilai = 'ipa';
-						}elseif ($i == 2) {
-							$mapel = 'Matematika';
-							$nilai = 'mtk';
-						}elseif ($i == 3) {
-							$mapel = 'Bahasa Indonesia';
-							$nilai = 'ind';
-						}elseif ($i == 4) {
-							$mapel = 'Bahasa Inggris';
-							$nilai = 'ing';
-						}
-						$data4 = array(
-							'mapel_unbk'			=> $mapel,
-							'nilai_unbk'			=> $this->input->post("unbk_".$nilai),
-							'no_pendaftaran'	=> $no_pendaftaran
-						);
-						$this->db->insert('tbl_nilai_unbk',$data4);
-					}
+			for ($i = 1; $i <= 4; $i++) {
+				if ($i == 1) {
+					$mapel = 'Ilmu Pengetahuan Alam (IPA)';
+					$nilai = 'ipa';
+				} elseif ($i == 2) {
+					$mapel = 'Matematika';
+					$nilai = 'mtk';
+				} elseif ($i == 3) {
+					$mapel = 'Bahasa Indonesia';
+					$nilai = 'ind';
+				} elseif ($i == 4) {
+					$mapel = 'Bahasa Inggris';
+					$nilai = 'ing';
+				}
+				$data4 = array(
+					'mapel_unbk'			=> $mapel,
+					'nilai_unbk'			=> $this->input->post("unbk_" . $nilai),
+					'no_pendaftaran'	=> $no_pendaftaran
+				);
+				$this->db->insert('tbl_nilai_unbk', $data4);
+			}
 
-						// $this->session->set_flashdata('msg',
-						// 	'
-						// 	<div class="alert alert-success alert-dismissible" role="alert">
-						// 		 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						// 			 <span aria-hidden="true">&times;&nbsp; &nbsp;</span>
-						// 		 </button>
-						// 		 <strong>Sukses!</strong> Berhasil ditambahkan.
-						// 	</div>'
-						// );
-						$this->session->set_userdata('no_pendaftaran', "$no_pendaftaran");
-						redirect('panel_siswa');
-
+			// $this->session->set_flashdata('msg',
+			// 	'
+			// 	<div class="alert alert-success alert-dismissible" role="alert">
+			// 		 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			// 			 <span aria-hidden="true">&times;&nbsp; &nbsp;</span>
+			// 		 </button>
+			// 		 <strong>Sukses!</strong> Berhasil ditambahkan.
+			// 	</div>'
+			// );
+			$this->session->set_userdata('no_pendaftaran', "$no_pendaftaran");
+			redirect('panel_siswa');
 		}
-
-
 	}
 
 	public function logcs()
@@ -242,59 +313,61 @@ class Web extends CI_Controller {
 			redirect('404');
 		}
 		$ceks = $this->session->userdata('no_pendaftaran');
-		if(isset($ceks)) {
+		if (isset($ceks)) {
 			redirect('panel_siswa');
-		}else{
+		} else {
 			$this->load->view('web/index', $data);
 
-				if (isset($_POST['btnlogin'])){
-						 $username = $_POST['username'];
-						 $pass	   = $_POST['password'];
+			if (isset($_POST['btnlogin'])) {
+				$username = $_POST['username'];
+				$pass	   = $_POST['password'];
 
-						 $this->db->like('tgl_siswa', date('Y'), "after");
-						 $query  = $this->db->get_where('tbl_siswa', "no_pendaftaran='$username'");
-						 $cek    = $query->result();
-						 $cekun  = $cek[0]->no_pendaftaran;
-						 $jumlah = $query->num_rows();
+				$this->db->like('tgl_siswa', date('Y'), "after");
+				$query  = $this->db->get_where('tbl_siswa', "no_pendaftaran='$username'");
+				$cek    = $query->result();
+				$cekun  = $cek[0]->no_pendaftaran;
+				$jumlah = $query->num_rows();
 
-						 if($jumlah == 0) {
-								 $this->session->set_flashdata('msg',
-									 '
+				if ($jumlah == 0) {
+					$this->session->set_flashdata(
+						'msg',
+						'
 									 <div class="alert alert-danger alert-dismissible" role="alert">
 									 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 												<span aria-hidden="true">&times;&nbsp;</span>
 											</button>
-											<strong>No. Pendaftaran "'.$username.'"</strong> belum terdaftar.
+											<strong>No. Pendaftaran "' . $username . '"</strong> belum terdaftar.
 									 </div>'
-								 );
-								 redirect('logcs');
-						 } else {
-										 $row = $query->row();
-										 $cekpass = $row->password;
-										 if($cekpass <> $pass) {
-												$this->session->set_flashdata('msg',
-													 '<div class="alert alert-warning alert-dismissible" role="alert">
+					);
+					redirect('logcs');
+				} else {
+					$row = $query->row();
+					$cekpass = $row->password;
+					if ($cekpass <> $pass) {
+						$this->session->set_flashdata(
+							'msg',
+							'<div class="alert alert-warning alert-dismissible" role="alert">
 													 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 																<span aria-hidden="true">&times;&nbsp;</span>
 															</button>
 															<strong>No. Pendaftaran atau NISN Salah!</strong>.
 													 </div>'
-												);
-												redirect('logcs');
-										 } else {
+						);
+						redirect('logcs');
+					} else {
 
-																$this->session->set_userdata('no_pendaftaran', "$cekun");
+						$this->session->set_userdata('no_pendaftaran', "$cekun");
 
-												 			 	redirect('panel_siswa');
-										 }
-						 }
+						redirect('panel_siswa');
+					}
 				}
+			}
 		}
 	}
 
 
-	function error_not_found(){
+	function error_not_found()
+	{
 		$this->load->view('404_content');
 	}
-
 }
