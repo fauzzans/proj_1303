@@ -12,8 +12,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/icons/font-awesome/font-awesome.css" rel="stylesheet"> 
-    
+    <link href="assets/css/icons/font-awesome/font-awesome.css" rel="stylesheet">
+
 
     <!-- Custom styles for this template -->
     <!-- <link href="assets/css/freelancer.css" rel="stylesheet"> -->
@@ -117,90 +117,121 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3" style="float:none;margin:auto;">
-                    <span><a href="pendaftaran" class="btn btn-success btn-lg" style="width:300px;margin:15px;"><i class="fa fa-file faa-pulse animated"></i> &nbsp;Pendaftaran PPDB Online</a>
-                            <a href="logcs" class="btn btn-success btn-lg" style="width:300px;margin:15px;"><i class="fa fa-users faa-pulse animated"></i> &nbsp;Login Calon Siswa</a><br>
-                        </span>
+                <span><a href="pendaftaran" class="btn btn-success btn-lg" style="width:300px;margin:15px;"><i class="fa fa-file faa-pulse animated"></i> &nbsp;Pendaftaran PPDB Online</a>
+                    <a href="logcs" class="btn btn-success btn-lg" style="width:300px;margin:15px;"><i class="fa fa-users faa-pulse animated"></i> &nbsp;Login Calon Siswa</a><br>
+                </span>
             </div>
-       </div>
+        </div>
         <!-- Marketing Icons Section -->
-        <div class="row">
+        <!-- <div class="row shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 20px;">
             <div class="col-lg-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                    <h4>Pendiri Pesantren</h4>
+                        <h4>Pendiri Pesantren</h4>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
                     </div>
                     <div class="card-footer">
-                        <a href="<?php echo site_url('Web/pimpinan')?>" class="btn btn-primary">Selengkapnya</a>
+                        <a href="<?php echo site_url('Web/pimpinan') ?>" class="btn btn-primary">Selengkapnya</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                    <h4>Sejarah Singkat</h4>
+                        <h4>Sejarah Singkat</h4>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint
                             fuga.
                         </p>
                     </div>
                     <div class="card-footer">
-                        <a href="<?php echo site_url('Web/sejarah')?>" class="btn btn-primary">Selengkapnya</a>
+                        <a href="<?php echo site_url('Web/sejarah') ?>" class="btn btn-primary">Selengkapnya</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- /.row -->
 
-        <!-- Portfolio Section -->
-        <h2 style="text-align:center">Informasi Terbaru</h2>
+        <section id="prosedur">
+            <div class="container shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="row" style="margin-top: 20px;">
+                    <div class=" col-lg-12 text-center">
+                        <h2>Prosedur PPDB Online</h2>
+                        <hr>
+                        <img class="img-responsive" src="img/alur_ppdb_online.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3" style="margin-top:-10px;">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h4>Penjelasan Prosedur PPDB Online</h4>
+                                <ol style="font-size:18px;text-align:justify">
+                                    <li>Calon Siswa mendaftarkan diri atau melakukan <b><a href="pendaftaran">Pendaftaran PPDB <i>online</i></a></b> melalui website <b><a href="">PPDB Pondok Pesantren Darut Tafsir</a></b>.</li>
+                                    <li>Setelah Calon Siswa berhasil melakukan pendaftaran, Calon siswa wajib melakukan <b>Print Out Pendaftaran & Mempersiapkan Kelengkapan Berkas PPDB Pondok Pesantren Darut Tafsir</b>.</li>
+                                    <li>Calon siswa datang ke Pondok Pesantren Darut Tafsir untuk <b>VERIFIKASI</b>, membawa <b>Bukti pendaftaran & Kelengkapan Berkas PPDB Pondok Pesantren Darut Tafsir</b>. </li>
+                                    <li>Panitia PPDB melakukan <b>Verifikasi dan Validasi Berkas Pendaftaran</b>.</li>
+                                    <li>Setelah selesai Calon Siswa Menerima <b>TANDA BUKTI VERIFIKASI</b>.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="img/logo.png" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Lorem ipsum</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="sejarah.html" class="btn btn-primary">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="img/logo.png" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Lorem ipsum</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="sejarah.html" class="btn btn-primary">Selengkapnya</a>
+        <!-- Portfolio Section -->
+        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <h2 style="text-align:center;margin-top:20px;">Informasi Terbaru</h2>
+            <hr>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 portfolio-item">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="img/logo.png" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Lorem ipsum</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="sejarah.html" class="btn btn-primary">Selengkapnya</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="img/logo.png" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Lorem ipsum</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+                <div class="col-lg-4 col-sm-6 portfolio-item">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="img/logo.png" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Lorem ipsum</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="sejarah.html" class="btn btn-primary">Selengkapnya</a>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <a href="sejarah.html" class="btn btn-primary">Selengkapnya</a>
+                </div>
+                <div class="col-lg-4 col-sm-6 portfolio-item">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="img/logo.png" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Lorem ipsum</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="sejarah.html" class="btn btn-primary">Selengkapnya</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-            <h2 style="text-align:center">PENGURUS YPP DARUT TAFSIR</h2>
-
+        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <h2 style="text-align:center; margin-top:20px;">PENGURUS YPP DARUT TAFSIR</h2>
+            <hr>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-80">
@@ -245,55 +276,60 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
         <!-- /.row -->
 
         <!-- Page Content -->
-  <div class="container">
+        <div class="container shadow-lg p-3 mb-5 bg-white rounded">
 
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Kontak Kami
-    </h1>
-<!-- 
+            <!-- Page Heading/Breadcrumbs -->
+            <h1 class="mt-4 mb-3">
+            </h1>
+            <!-- 
     <ol class="breadcrumb">
       <li>
       Kontak Kami
       </li>
     </ol> -->
 
-    <!-- Content Row -->
-    <div class="row">
-      <!-- Map Column -->
-      <div class="col-lg-8 mb-4">
-        <!-- Embedded Google Map -->
-        <iframe style="width: 100%; height: 400px; border: 0;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15854.83552867712!2d106.7153432!3d-6.5583857!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8d420476751b013e!2sPondok%20Pesantren%20Darut%20Tafsir!5e0!3m2!1sid!2sid!4v1615609259908!5m2!1sid!2sid"></iframe>
-      </div>
-      <!-- Contact Details Column -->
-      <div class="col-lg-4 mb-4">
-        <p>
-                             Pondok Pesantren Darut Tafsir
-                    Kampung Pabuaran Kaum, RT.3/RW.2, Cibanteng, Kec. Ciampea, Bogor, Jawa Barat 16620
-        </p>
-        <p>
-          Telp. : 0813-9973-0940
-        </p>
-        <p>
-          Email :
-          <a href="mailto:name@example.com">pondokpesantrendaruttafsir@gmail.com
-          </a>
-        </p>
-      </div>
+            <!-- Content Row -->
+            <div class="row">
+                <!-- Map Column -->
+                <div class="col-lg-8 mb-4">
+                    <!-- Embedded Google Map -->
+                    <iframe style="width: 100%; height: 400px; border: 0;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15854.83552867712!2d106.7153432!3d-6.5583857!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8d420476751b013e!2sPondok%20Pesantren%20Darut%20Tafsir!5e0!3m2!1sid!2sid!4v1615609259908!5m2!1sid!2sid"></iframe>
+                </div>
+                <!-- Contact Details Column -->
+                <div class="col-lg-4 mb-4">
+                    <h3>Hubungi Kami</h3>
+                    <p>
+                        Pondok Pesantren Darut Tafsir
+                        Kampung Pabuaran Kaum, RT.3/RW.2, Cibanteng, Kec. Ciampea, Bogor, Jawa Barat 16620
+                    </p>
+                    <p>
+                        Telp : 0813-9973-0940<br> Ustz.Tj : 0852-8243-3821<br> Pak Irta : 0813-8148-3924<br> Ibu Rosi : 0857-1801-7005
+
+                    </p>
+                    <p>
+                        Email :
+                        <a href="mailto:name@example.com">pondokpesantrendaruttafsir@gmail.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /.container -->
 
     <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; pondokpesantrendaruttafsir 2021</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; pondokpesantrendaruttafsir 2021</p>
+        </div>
+        <!-- /.container -->
+    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>

@@ -75,17 +75,18 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Post Title
+    <h1 class="mt-4 mb-3">Judul Berita
       <small>by
-        <a href="#">Start Bootstrap</a>
+        <a href="#">Author Darut Tafsir</a>
       </small>
     </h1>
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
+        <a href="<?php echo site_url('index.php') ?>">Home</a>
       </li>
-      <li class="breadcrumb-item active">Blog Home 2</li>
+      <li class="breadcrumb-item active">Berita</li>
+      <li class="breadcrumb-item active">Judul Berita</li>
     </ol>
 
     <div class="row">
@@ -96,12 +97,12 @@
         <!-- Preview Image -->
         <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
 
-        <hr>
+        <hr class="news">
 
         <!-- Date/Time -->
         <p>Posted on January 1, 2017 at 12:00 PM</p>
 
-        <hr>
+        <hr class="news">
 
         <!-- Post Content -->
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
@@ -121,7 +122,7 @@
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
 
-        <hr>
+        <hr class="news">
 
         <!-- Comments Form -->
         <div class="card my-4">

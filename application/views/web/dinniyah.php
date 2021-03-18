@@ -75,41 +75,40 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Portfolio Item
-      <small>Subheading</small>
+    <h1 class="mt-4 mb-3">
     </h1>
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
+        <a href="<?php echo site_url('index.php') ?>">Home</a>
       </li>
-      <li class="breadcrumb-item active">Portfolio Item</li>
+      <li class="breadcrumb-item active">Dinniyah</li>
     </ol>
 
     <!-- Portfolio Item Row -->
     <div class="row">
 
       <div class="col-md-8">
-        <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+        <img class="img-fluid" src="img/galeri/galeri.jpg" alt="">
       </div>
 
       <div class="col-md-4">
-        <h3 class="my-3">Project Description</h3>
+        <h3 class="my-3">Pendidikan Dinniyah Darut Tafsir</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-        <h3 class="my-3">Project Details</h3>
+        <!-- <h3 class="my-3">Project Details</h3>
         <ul>
           <li>Lorem Ipsum</li>
           <li>Dolor Sit Amet</li>
           <li>Consectetur</li>
           <li>Adipiscing Elit</li>
-        </ul>
+        </ul> -->
       </div>
 
     </div>
     <!-- /.row -->
 
     <!-- Related Projects Row -->
-    <h3 class="my-4">Related Projects</h3>
+    <h3 class="my-4">Fasilitas</h3>
 
     <div class="row">
 
