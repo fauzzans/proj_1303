@@ -25,7 +25,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="<?php echo site_url('index.php') ?>"><img src="img/logo.png" alt="Logo" width="30" style="position:absolute;margin-top"> <span style="margin-left:35px;">Ponpes Darut Tafsir</span></a>
+      <a class="navbar-brand" href="<?php echo site_url('index.php') ?>"><img src="img/logo_PPDT.png" alt="Logo" width="30" style="position:absolute;margin-top:12px"> <span style="margin-left:35px; font-size:35px; font-weight:700">Ponpes Darut Tafsir</span></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,7 +37,8 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
               <a class="dropdown-item" href="<?php echo site_url('Web/sejarah') ?>">Sejarah Darut Tafsir</a>
-              <a class="dropdown-item" href="<?php echo site_url('Web/visidanmisi') ?>">Visi dan Misi</a>
+              <a class="dropdown-item" href="<?php echo site_url('Web/pimpinan') ?>">Pendiri Pesantren</a>
+              <a class="dropdown-item" href="<?php echo site_url('Web/visimisi') ?>">Visi dan Misi</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -95,50 +96,69 @@
       <div class="col-md-4">
         <h3 class="my-3">Madrasah Tsanawiyah Darut Tafsir</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-        <!-- <h3 class="my-3">Project Details</h3>
-        <ul>
-          <li>Lorem Ipsum</li>
-          <li>Dolor Sit Amet</li>
-          <li>Consectetur</li>
-          <li>Adipiscing Elit</li>
-        </ul> -->
       </div>
-
     </div>
     <!-- /.row -->
-
+    <div class="my-4">
+      <h3 class="my-3">Kegiatan Santri</h3>
+      <ul>
+        <li>03.30 - Shalat tahajud dilanjutkan shalat subuh berjamaah dan pembacaan awrad</li>
+        <li>05.00 - Pengajian umum oleh pimpinan pesantren atau tahfidzh Al-Quran</li>
+        <li>06.15 - Mandi pagi, sarapan, dan pemberian kosa kata bahasa arab/inggris serta muhadasah dan piket kamar/kelas/sekitar pondok</li>
+        <li>07.30 - Belajar formal</li>
+        <li>12.15 - Shalat Dzuhur berjamaah dilanjutkan makan siang</li>
+        <li>13.00 - Belajar dinniyah (pengajian kitab) di kelas</li>
+        <li>16.00 - Shalat ashar berjamaah dilanjutkan piket, makan sore, dan mandi</li>
+        <li>17.30 - Tartilan Al-Quran dan persiapan shalat magrib berjamaah</li>
+        <li>18.00 - Shalat magrib berjamaah dilanjutkan pembacaan awrad dan tahfidzh Al-Quran/Pengajian soragan</li>
+        <li>19.30 - Shalat isya berjamaah</li>
+        <li>20.00 - Belajar malam</li>
+        <li>22.00 - Tidur</li>
+      </ul>
+    </div>
     <!-- Related Projects Row -->
-    <h3 class="my-4">Fasilitas</h3>
+    <h3 class="my-4">Ekstrakurikuler</h3>
 
     <div class="row">
 
       <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        <a href="#" class="pop">
+          <img class="img-fluid" src="img/ekskul/silat.jpg" alt="">
         </a>
       </div>
 
       <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        <a href="#" class="pop">
+          <img class="img-fluid" src="img/ekskul/marching.jpg" alt="">
         </a>
       </div>
 
       <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        <a href="#" class="pop">
+          <img class="img-fluid" src="img/ekskul/pramuka.jpg" alt="">
         </a>
       </div>
 
       <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        <a href="#" class="pop">
+          <img class="img-fluid" src="img/ekskul/marching1.jpg" alt="">
         </a>
       </div>
 
     </div>
     <!-- /.row -->
-
+    <!--modalimage-->
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <img src="" class="imagepreview" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/modalimage-->
   </div>
   <!-- /.container -->
 
@@ -173,6 +193,15 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script><!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(function() {
+      $('.pop').on('click', function(e) {
+        $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+        $('#imagemodal').modal('show');
+        e.preventDefault();
+      });
+    });
+  </script>
 
 </body>
 

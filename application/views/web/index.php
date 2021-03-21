@@ -26,7 +26,7 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="<?php echo site_url('index.php') ?>"><img src="img/logo.png" alt="Logo" width="30" style="position:absolute;margin-top:12px"> <span style="margin-left:35px; font-size:35px; font-weight:700">Ponpes Darut Tafsir</span></a>
+            <a class="navbar-brand" href="<?php echo site_url('index.php') ?>"><img src="img/logo_PPDT.png" alt="Logo" width="30" style="position:absolute;margin-top:12px"> <span style="margin-left:35px; font-size:35px; font-weight:700">Ponpes Darut Tafsir</span></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -157,7 +157,7 @@
                     <div class=" col-lg-12 text-center">
                         <h2>Prosedur PPDB Online</h2>
                         <hr>
-                        <img class="img-responsive" src="img/alur_ppdb_online.jpg" alt="">
+                        <img class="img-fluid" src="img/alur_ppdb_online.jpg" alt="">
                     </div>
                 </div>
                 <div class="row">

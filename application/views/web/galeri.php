@@ -25,7 +25,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="<?php echo site_url('index.php') ?>"><img src="img/logo.png" alt="Logo" width="30" style="position:absolute;margin-top:12px;"> <span style="margin-left:35px;">Ponpes Darut Tafsir</span></a>
+      <a class="navbar-brand" href="<?php echo site_url('index.php') ?>"><img src="img/logo_PPDT.png" alt="Logo" width="30" style="position:absolute;margin-top:12px"> <span style="margin-left:35px; font-size:35px; font-weight:700">Ponpes Darut Tafsir</span></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,7 +37,8 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
               <a class="dropdown-item" href="<?php echo site_url('Web/sejarah') ?>">Sejarah Darut Tafsir</a>
-              <a class="dropdown-item" href="<?php echo site_url('Web/visidanmisi') ?>">Visi dan Misi</a>
+              <a class="dropdown-item" href="<?php echo site_url('Web/pimpinan') ?>">Pendiri Pesantren</a>
+              <a class="dropdown-item" href="<?php echo site_url('Web/visimisi') ?>">Visi dan Misi</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -86,9 +87,9 @@
     </ol>
 
     <div class="row">
-      <div class="col-lg-6 portfolio-item">
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/galeri/galeri.jpg" alt=""></a>
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri.jpg" alt=""></a>
           <!-- <div class="card-body">
             <h4 class="card-title">
               <a href="#">Project One</a>
@@ -97,9 +98,9 @@
           </div> -->
         </div>
       </div>
-      <div class="col-lg-6 portfolio-item">
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/galeri/galeri1.jpg" alt=""></a>
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri1.jpg" alt=""></a>
           <!-- <div class="card-body">
             <h4 class="card-title">
               <a href="#">Project Two</a>
@@ -108,9 +109,9 @@
           </div> -->
         </div>
       </div>
-      <div class="col-lg-6 portfolio-item">
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/galeri/galeri2.jpg" alt=""></a>
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri2.jpg" alt=""></a>
           <!-- <div class="card-body">
             <h4 class="card-title">
               <a href="#">Project Three</a>
@@ -119,9 +120,9 @@
           </div> -->
         </div>
       </div>
-      <div class="col-lg-6 portfolio-item">
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/galeri/galeri3.jpg" alt=""></a>
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri3.jpg" alt=""></a>
           <!-- <div class="card-body">
             <h4 class="card-title">
               <a href="#">Project Four</a>
@@ -130,9 +131,9 @@
           </div> -->
         </div>
       </div>
-      <div class="col-lg-6 portfolio-item">
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/galeri/galeri4.jpg" alt=""></a>
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri4.jpg" alt=""></a>
           <!-- <div class="card-body">
             <h4 class="card-title">
               <a href="#">Project Five</a>
@@ -141,9 +142,75 @@
           </div> -->
         </div>
       </div>
-      <div class="col-lg-6 portfolio-item">
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/galeri/galeri5.jpg" alt=""></a>
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri5.jpg" alt=""></a>
+          <!-- <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project Six</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+          </div> -->
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri5.jpg" alt=""></a>
+          <!-- <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project Six</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+          </div> -->
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri5.jpg" alt=""></a>
+          <!-- <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project Six</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+          </div> -->
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri5.jpg" alt=""></a>
+          <!-- <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project Six</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+          </div> -->
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri5.jpg" alt=""></a>
+          <!-- <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project Six</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+          </div> -->
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri5.jpg" alt=""></a>
+          <!-- <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Project Six</a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+          </div> -->
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#" class="pop"><img class="card-img-top" src="img/galeri/galeri5.jpg" alt=""></a>
           <!-- <div class="card-body">
             <h4 class="card-title">
               <a href="#">Project Six</a>
@@ -155,8 +222,21 @@
     </div>
     <!-- /.row -->
 
+    <!--modalimage-->
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <img src="" class="imagepreview" style="width: 100%">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/modalimage-->
+
     <!-- Pagination -->
-    <ul class="pagination justify-content-center">
+    <ul class=" pagination justify-content-center">
       <li class="page-item">
         <a class="page-link" href="#" aria-label="Previous">
           <span aria-hidden="true">&laquo;</span>
@@ -192,6 +272,7 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- jQuery -->
@@ -214,7 +295,22 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script><!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(function() {
+      $('.pop').on('click', function(e) {
+        $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+        $('#imagemodal').modal('show');
+        e.preventDefault();
+      });
+    });
 
+    // $(function() {
+    //   $('.pop').on('click', function() {
+    //     $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+    //     $('#imagemodal').modal('show');
+    //   });
+    // });
+  </script>
 </body>
 
 </html>

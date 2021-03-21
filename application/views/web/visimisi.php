@@ -26,7 +26,7 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="<?php echo site_url('index.php') ?>"><img src="img/logo.png" alt="Logo" width="30" style="position:absolute;margin-top"> <span style="margin-left:35px;">Ponpes Darut Tafsir</span></a>
+            <a class="navbar-brand" href="<?php echo site_url('index.php') ?>"><img src="img/logo_PPDT.png" alt="Logo" width="30" style="position:absolute;margin-top:12px"> <span style="margin-left:35px; font-size:35px; font-weight:700">Ponpes Darut Tafsir</span></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,6 +38,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                             <a class="dropdown-item" href="<?php echo site_url('Web/sejarah') ?>">Sejarah Darut Tafsir</a>
+                            <a class="dropdown-item" href="<?php echo site_url('Web/pimpinan') ?>">Pendiri Pesantren</a>
                             <a class="dropdown-item" href="<?php echo site_url('Web/visimisi') ?>">Visi dan Misi</a>
                         </div>
                     </li>
@@ -72,34 +73,34 @@
         </div>
     </nav>
 
-   <!-- Page Content -->
-  <div class="container">
+    <!-- Page Content -->
+    <div class="container">
 
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Visi dan Misi
-    </h1>
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Visi dan Misi
+        </h1>
 
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="<?php echo site_url('index.php')?>">Home</a>
-      </li>
-      <li class="breadcrumb-item active">Visi dan Misi</li>
-    </ol>
-    <div>
-    <h2>Visi</h2>
-    <p><q>Most of Start Bootstrap's unstyled templates can be directly integrated into the Modern Business template. You can view all of our unstyled templates on our website at
-      <a href="https://startbootstrap.com/template-categories/unstyled">https://startbootstrap.com/template-categories/unstyled</a>.</q></p>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="<?php echo site_url('index.php') ?>">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Visi dan Misi</li>
+        </ol>
+        <div>
+            <h2>Visi</h2>
+            <p><q>Most of Start Bootstrap's unstyled templates can be directly integrated into the Modern Business template. You can view all of our unstyled templates on our website at
+                    <a href="https://startbootstrap.com/template-categories/unstyled">https://startbootstrap.com/template-categories/unstyled</a>.</q></p>
+        </div>
+        <div>
+            <h2>Misi</h2>
+            <ul>
+                <li>bertaqwa</li>
+                <li>bertaqwa</li>
+                <li>bertaqwa</li>
+            </ul>
+        </div>
     </div>
-    <div>
-    <h2>Misi</h2>
-    <ul>
-        <li>bertaqwa</li>
-        <li>bertaqwa</li>
-        <li>bertaqwa</li>
-    </ul>
-    </div>
-  </div>
-  <!-- /.container -->
+    <!-- /.container -->
 
     <!-- Footer -->
     <footer class="py-3 bg-dark">
@@ -131,4 +132,5 @@
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

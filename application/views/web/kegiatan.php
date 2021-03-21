@@ -25,7 +25,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="<?php echo site_url('index.php') ?>"><img src="img/logo.png" alt="Logo" width="30" style="position:absolute;margin-top:12px"> <span style="margin-left:35px;">Ponpes Darut Tafsir</span></a>
+      <a class="navbar-brand" href="<?php echo site_url('index.php') ?>"><img src="img/logo_PPDT.png" alt="Logo" width="30" style="position:absolute;margin-top:12px"> <span style="margin-left:35px; font-size:35px; font-weight:700">Ponpes Darut Tafsir</span></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,7 +37,8 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
               <a class="dropdown-item" href="<?php echo site_url('Web/sejarah') ?>">Sejarah Darut Tafsir</a>
-              <a class="dropdown-item" href="<?php echo site_url('Web/visidanmisi') ?>">Visi dan Misi</a>
+              <a class="dropdown-item" href="<?php echo site_url('Web/pimpinan') ?>">Pendiri Pesantren</a>
+              <a class="dropdown-item" href="<?php echo site_url('Web/visimisi') ?>">Visi dan Misi</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -70,7 +71,6 @@
       </div>
     </div>
   </nav>
-
   <!-- Page Content -->
   <div class="container">
 

@@ -18,6 +18,11 @@ body {
     background-size: cover;
 }
 
+.info .carousel-inner>.item>img {
+    width: 100%;
+    max-height: 200px !important;
+}
+
 hr.star-light,
 hr.star-primary {
     padding: 0;
@@ -45,6 +50,19 @@ hr.news {
     margin-left: 35px;
     font-size: 35px;
     font-weight: 700;
+}
+
+ol.split {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+p {
+    text-align: justify;
 }
 
 @media (min-width: 768px) {
