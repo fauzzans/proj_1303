@@ -6,11 +6,29 @@
 
 body {
     padding-top: 56px;
+    background: #ebedf0 url(../images/pattern.png);
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+}
+
+
+/* .pattern {
+    background: #f7f9fc url(../images/pattern.png);
+    background-size: cover;
+    background-position: center;
+} */
+
+.sejarah {
+    font-size: 19px;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: #797d8a;
+    font-weight: 600;
 }
 
 .carousel-item {
     height: 65vh;
-    min-height: 300px;
+    min-height: 520px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -21,6 +39,26 @@ body {
 .info .carousel-inner>.item>img {
     width: 100%;
     max-height: 200px !important;
+}
+
+.carousel-caption {
+    top: 30%;
+    /* background-color: #fffefe1c; */
+}
+
+.home-slider-desc {
+    text-align: left;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-title {
+    font-size: 20px;
 }
 
 hr.star-light,

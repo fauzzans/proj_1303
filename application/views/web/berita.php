@@ -9,9 +9,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Modern Business - Start Bootstrap Template</title>
+  <title>Ponpes Darut Tafsir</title>
   <base href="<?php echo base_url(); ?>" />
 
+  <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
   <!-- Bootstrap core CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -76,7 +77,7 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Berita
+    <h1 class="mt-4 mb-3">
       <small></small>
     </h1>
 
@@ -94,10 +95,10 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top" src="img/format-brosur-01.jpg" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">Judul Berita</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+            <h2 class="card-title">PPDB 2021/2022</h2>
+            <p class="card-text">Penerimaan santri baru tahun ajaran 2021/202</p>
             <a href="<?php echo site_url('Web/berita_post') ?>" class="btn btn-primary">Selengkapnya &rarr;</a>
           </div>
           <div class="card-footer text-muted">
@@ -106,13 +107,12 @@
           </div>
         </div>
 
-        <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top" src="img/format-brosur-01.jpg" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">Judul Berita</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Selengkapnya &rarr;</a>
+            <h2 class="card-title">PPDB 2021/2022</h2>
+            <p class="card-text">Penerimaan santri baru tahun ajaran 2021/202</p>
+            <a href="<?php echo site_url('Web/berita_post') ?>" class="btn btn-primary">Selengkapnya &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 1, 2017 by
@@ -120,13 +120,12 @@
           </div>
         </div>
 
-        <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top" src="img/format-brosur-01.jpg" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">Judul Berita</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Selengkapnya &rarr;</a>
+            <h2 class="card-title">PPDB 2021/2022</h2>
+            <p class="card-text">Penerimaan santri baru tahun ajaran 2021/202</p>
+            <a href="<?php echo site_url('Web/berita_post') ?>" class="btn btn-primary">Selengkapnya &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 1, 2017 by

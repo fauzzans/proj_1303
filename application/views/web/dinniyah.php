@@ -9,8 +9,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Modern Business - Start Bootstrap Template</title>
+  <title>Ponpes Darut Tafsir</title>
   <base href="<?php echo base_url(); ?>" />
+
+  <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
 
   <!-- Bootstrap core CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -90,7 +92,7 @@
     <div class="row">
 
       <div class="col-md-8">
-        <img class="img-fluid" src="img/galeri/galeri.jpg" alt="">
+        <img class="img-fluid" src="img/galeri/dinniyah.jpg" alt="">
       </div>
 
       <div class="col-md-4">
@@ -146,7 +148,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+      <p class="m-0 text-center text-white">Copyright &copy; pondokpesantrendaruttafsir 2021</p>
     </div>
     <!-- /.container -->
   </footer>

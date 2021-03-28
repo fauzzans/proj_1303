@@ -60,7 +60,9 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background:#f7f9fc url(../img/pattern.png);background-size: cover;background-position: center;
+  /*background-color: #ffff;*/
+
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -6781,7 +6783,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #204c9c !important;
+  background-color: #008997 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,

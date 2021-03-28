@@ -9,8 +9,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>pondokpesantrendaruttafsir</title>
+  <title>Ponpes Darut Tafsir</title>
   <base href="<?php echo base_url(); ?>" />
+
+  <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
 
   <!-- Bootstrap core CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -75,7 +77,7 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Kegiatan
+    <h1 class="mt-4 mb-3">
     </h1>
 
     <ol class="breadcrumb">
@@ -92,9 +94,9 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top" src="img/galeri/galeri12.jpg" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">Judul Kegiatan</h2>
+            <h2 class="card-title">Pembukaan Muhadharah</h2>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
             <a href="<?php echo site_url('Web/kegiatan_post') ?>" class="btn btn-primary">Selengkapnya &rarr;</a>
           </div>
@@ -104,13 +106,12 @@
           </div>
         </div>
 
-        <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top" src="img/galeri/galeri12.jpg" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">Judul Kegiatan</h2>
+            <h2 class="card-title">Pembukaan Muhadharah</h2>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Selengkapnya &rarr;</a>
+            <a href="<?php echo site_url('Web/kegiatan_post') ?>" class="btn btn-primary">Selengkapnya &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 1, 2017 by
@@ -118,13 +119,12 @@
           </div>
         </div>
 
-        <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top" src="img/galeri/galeri12.jpg" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">Judul Kegiatan</h2>
+            <h2 class="card-title">Pembukaan Muhadharah</h2>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Selengkapnya &rarr;</a>
+            <a href="<?php echo site_url('Web/kegiatan_post') ?>" class="btn btn-primary">Selengkapnya &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 1, 2017 by

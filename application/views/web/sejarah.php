@@ -9,8 +9,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Modern Business - Start Bootstrap Template</title>
+  <title>Ponpes Darut Tafsir</title>
   <base href="<?php echo base_url(); ?>" />
+
+  <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
 
 
   <!-- Bootstrap core CSS -->
@@ -77,7 +79,7 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Sejarah Singkat
+    <h1 class="mt-4 mb-3">
     </h1>
 
     <ol class="breadcrumb">

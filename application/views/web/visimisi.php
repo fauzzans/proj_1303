@@ -9,8 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>Ponpes Darut Tafsir</title>
     <base href="<?php echo base_url(); ?>" />
+
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
 
 
     <!-- Bootstrap core CSS -->
@@ -72,12 +74,51 @@
             </div>
         </div>
     </nav>
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('img/background/header.png')">
+                    <div class="carousel-caption d-none d-md-block">
+
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('img/background/bg_header.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <!-- <h3>Second Slide</h3>
+                        <p>This is a description for the second slide.</p> -->
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('img/background/header2.png')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <!-- <h3>Third Slide</h3>
+                        <p>This is a description for the third slide.</p> -->
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
 
     <!-- Page Content -->
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3">Visi dan Misi
+        <h1 class="mt-4 mb-3">
         </h1>
 
         <ol class="breadcrumb">
@@ -88,15 +129,20 @@
         </ol>
         <div>
             <h2>Visi</h2>
-            <p><q>Most of Start Bootstrap's unstyled templates can be directly integrated into the Modern Business template. You can view all of our unstyled templates on our website at
-                    <a href="https://startbootstrap.com/template-categories/unstyled">https://startbootstrap.com/template-categories/unstyled</a>.</q></p>
+            <p><q>TERWUJUDNYA GENERASI ISLAM YANG BERILMU AMALIYAH, BERWAWASAN LUAS DAN BERAKHLAQUL KARIMAH</q></p>
         </div>
         <div>
             <h2>Misi</h2>
             <ul>
-                <li>bertaqwa</li>
-                <li>bertaqwa</li>
-                <li>bertaqwa</li>
+                <li>Menanamkan keimanan, ketaqwaan kepada Allah serta pembinaan akhlak al-karimah.</li>
+                <li>Menyelenggarakan pendidikan yang berkualitas dalam pencapaian prestasi akademik dan non akademik
+                </li>
+                <li>Menyiapkan kader-kader ulama dan pemimpin umat yang mutafaqqih fi ad-diin
+                </li>
+                <li>Menanamkan jiwa keikhlasan, kesederhanaan, ukhuwah Islamiyah, kemandirian dan kebebasan dalam kehidupan sehari - hari.
+                </li>
+                <li>Mempersiapkan santri untuk menjadi manusia mandiri dan berkhidmad kepada masyarakat, agama, nusa dan bangsa.
+                </li>
             </ul>
         </div>
     </div>
@@ -105,7 +151,7 @@
     <!-- Footer -->
     <footer class="py-3 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+            <p class="m-0 text-center text-white">Copyright &copy; pondokpesantrendaruttafsir 2021</p>
         </div>
         <!-- /.container -->
     </footer>

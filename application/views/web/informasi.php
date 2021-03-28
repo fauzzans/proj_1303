@@ -9,8 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>Ponpes Darut Tafsir</title>
     <base href="<?php echo base_url(); ?>" />
+
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
 
     <!-- Bootstrap core CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -76,7 +78,7 @@
     <!-- Page Content -->
     <div class="container">
         <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3">Kontak
+        <h1 class="mt-4 mb-3">
         </h1>
 
         <ol class="breadcrumb">
@@ -86,8 +88,59 @@
             <li class="breadcrumb-item active">Kontak</li>
         </ol>
 
+        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <h2 style="text-align:center; margin-top:20px;">PENGURUS YPP DARUT TAFSIR</h2>
+            <hr>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                    <div class="card h-80" style="width: 250px;border: none;">
+                        <img class="card-img-top rounded-circle" src="img/ava.jpg" alt="">
+                        <div>
+                            <h4 class="card-title" style="text-align:center; color:#147139;">Nama</h4>
+                            <div>
+                                <h4 class="card-title" style="text-align:center;">Pimpinan PP Darut Tafsir</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                    <div class="card h-80" style="width: 250px;border: none;">
+                        <img class="card-img-top rounded-circle" src="img/ava.jpg" alt="">
+                        <div>
+                            <h4 class="card-title" style="text-align:center; color:#147139;">Nama</h4>
+                            <div>
+                                <h4 class="card-title" style="text-align:center;">Mudir PP Darut Tafsir</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                    <div class="card h-80" style="width: 250px;border: none;">
+                        <img class="card-img-top rounded-circle" src="img/ava.jpg" alt="">
+                        <div>
+                            <h4 class="card-title" style="text-align:center; color:#147139;">Nama</h4>
+                            <div>
+                                <h4 class="card-title" style="text-align:center;">Sekretaris </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                    <div class="card h-80" style="width: 250px;border: none;">
+                        <img class="card-img-top rounded-circle" src="img/ava.jpg" alt="">
+                        <div>
+                            <h4 class="card-title" style="text-align:center; color:#147139;">Nama</h4>
+                            <div>
+                                <h4 class="card-title" style="text-align:center;">Bendahara</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
         <!-- Content Row -->
-        <div class="row">
+        <div class="row shadow-lg p-3 mb-5 bg-white rounded">
             <!-- Map Column -->
             <div class="row">
                 <div class="col-lg-8">
@@ -135,17 +188,28 @@
                             <a href="mailto:name@example.com">pondokpesantrendaruttafsir@gmail.com
                             </a>
                         </p>
+                        <div>
+                            <div class="card h-20" style="border: none;">
+                                <figure class="figure" style="width: 250px;display: block;margin: 0 auto;">
+                                    <img class="card-img-top rounded-circle" src="img/ava1.jpg" alt="">
+                                    <div>
+                                        <figcaption class="figure-caption text-center">DIVISI IT</figcaption>
+                                        <!-- <h4 class="card-title" style="text-align:center; ;">DIVISI</h4> -->
+                                        <h4 class="card-title" style="text-align:center;">Muhammad Fauzi S.T</h4>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
-        <!-- /.row -->
     </div>
     <!-- /.container -->
     <br>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+            <p class="m-0 text-center text-white">Copyright &copy; pondokpesantrendaruttafsir 2021</p>
         </div>
         <!-- /.container -->
     </footer>

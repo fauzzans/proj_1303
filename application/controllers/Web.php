@@ -54,6 +54,9 @@ class Web extends CI_Controller
 
 	public function galeri()
 	{
+		$this->load->helper('url');
+		$this->load->helper('directory');
+
 		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
 		$this->load->view('web/galeri', $data);
 	}
