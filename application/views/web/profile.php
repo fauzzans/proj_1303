@@ -32,50 +32,56 @@
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom bxshad">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="#page-top"><img src="img/logo.png" alt="Logo" width="30" style="position:absolute;margin-top:-10px;"> <span style="margin-left:35px;">Ponpes Darut Tafsir</span> </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Profile<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="<?php echo site_url('Web/profile') ?>">Sejarah</a></li>
-                            <li><a class="dropdown-item" href="<?php echo site_url('Web/visimisi') ?>">Visi Misi</a></li>
-                        </ul>
+            <a class="navbar-brand" href="<?php echo site_url('index.php') ?>"><img src="img/logo_PPDT.png" alt="Logo" width="30" style="position:absolute;margin-top:12px"> <span style="margin-left:35px; font-size:35px; font-weight:700">Ponpes Darut Tafsir</span></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo site_url('index.php') ?>">Home</a>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">News<span class="caret"></span></a>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <li><a class="dropdown-item" href="#">Berita</a></li>
-                            <li><a class="dropdown-item" href="#">Kegiatan</a></li>
-                        </ul>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Profile
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                            <a class="dropdown-item" href="<?php echo site_url('Web/sejarah') ?>">Sejarah Darut Tafsir</a>
+                            <a class="dropdown-item" href="<?php echo site_url('Web/pimpinan') ?>">Pendiri Pesantren</a>
+                            <a class="dropdown-item" href="<?php echo site_url('Web/visimisi') ?>">Visi dan Misi</a>
+                        </div>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Sekolah<span class="caret"></span></a>
-                        <ul class="dropdown-menu dropdown-menu-left">
-                            <li><a class="dropdown-item" href="#">Dinniyah</a></li>
-                            <li><a class="dropdown-item" href="#">MTs</a></li>
-                            <li><a class="dropdown-item" href="#">MA</a></li>
-                            <li><a class="dropdown-item" href="#">SMA</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo site_url('Web/Kegiatan') ?>">Kegiatan</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#">Galeri</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo site_url('Web/Berita') ?>">Berita</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#about"><i class="fa fa-info-circle"></i> Informasi</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo site_url('Web/galeri') ?>">Galeri</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sekolah
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="<?php echo site_url('Web/dinniyah') ?>">Dinniyah</a>
+                            <a class="dropdown-item" href="<?php echo site_url('Web/mts') ?>">Mts</a>
+                            <a class="dropdown-item" href="<?php echo site_url('Web/ma') ?>">MA</a>
+                            <a class="dropdown-item" href="<?php echo site_url('Web/sma') ?>">SMA</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo site_url('Web/informasi') ?>">Informasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo site_url('Web/informasi') ?>">Login</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
 
     <!-- Header -->

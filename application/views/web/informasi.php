@@ -19,6 +19,9 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/modern-business.css" rel="stylesheet">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
 
 </head>
@@ -34,6 +37,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo site_url('index.php') ?>">Home</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Profile
@@ -44,14 +50,11 @@
                             <a class="dropdown-item" href="<?php echo site_url('Web/visimisi') ?>">Visi dan Misi</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Berita
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                            <a class="dropdown-item" href="<?php echo site_url('Web/berita') ?>">Berita</a>
-                            <a class="dropdown-item" href="<?php echo site_url('Web/kegiatan') ?>">Kegiatan</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo site_url('Web/Kegiatan') ?>">Kegiatan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo site_url('Web/Berita') ?>">Berita</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo site_url('Web/galeri') ?>">Galeri</a>
@@ -69,6 +72,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo site_url('Web/informasi') ?>">Informasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo site_url('Web/informasi') ?>">Login</a>
                     </li>
                 </ul>
             </div>
@@ -187,6 +193,8 @@
                             Email :
                             <a href="mailto:name@example.com">pondokpesantrendaruttafsir@gmail.com
                             </a>
+                            <br>
+                        <p><i class="fa-facebook"></i><i class="fa-instagram"></i></p>
                         </p>
                         <div>
                             <div class="card h-20" style="border: none;">
