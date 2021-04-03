@@ -65,11 +65,11 @@
       <td><?php echo $this->Model_data->tgl_id(date('d-m-Y')); ?></td>
     </tr>
     <tr>
-    <tr>
-      <td>NIK</td>
-      <td>:</td>
-      <td><?php echo $user->nik; ?></td>
-    </tr>
+<!--    <tr>-->
+<!--      <td>NIK</td>-->
+<!--      <td>:</td>-->
+<!--      <td>--><?php //echo $user->nik; ?><!--</td>-->
+<!--    </tr>-->
     <tr>
       <td>Nama Lengkap</td>
       <td>:</td>
@@ -78,7 +78,7 @@
     <tr>
       <td>Jenis Kelamin</td>
       <td>:</td>
-      <td><?php echo $user->jk; ?></td>
+      <td><?php if ($user->jenis_kelamin == '1'){echo "Laki-laki";}else{echo "Perempuan";}  ?></td>
     </tr>
     <tr>
       <td>Tempat Tanggal Lahir</td>
@@ -88,24 +88,24 @@
     <tr>
       <td>Anak Ke (berapa)</td>
       <td>:</td>
-      <td></td>
+      <td><?php echo $user->anak_ke;?></td>
     </tr>
     <tr>
       <td>Jumlah Saudara</td>
       <td>:</td>
-      <td>Kandung </td>
-      <td>Berat Badan</td>
+      <td>Kandung <?php echo $user->jml_saudara_knd;?> Orang</td>
+<!--      <td>Berat Badan</td>-->
     </tr>
     <tr>
       <td></td>
       <td>:</td>
-      <td>Tiri</td>
-      <td>Tinggi</td>
+      <td>Tiri <?php echo $user->jml_saudara_tiri;?> Orang</td>
+<!--      <td>Tinggi</td>-->
     </tr>
     <tr>
       <td>Alamat Lengkap</td>
       <td>:</td>
-      <td></td>
+      <td><?php echo $user->alamat_siswa;?></td>
     </tr>
     <tr>
       <td></td>
@@ -131,7 +131,7 @@
       <!-- hubungan keluarga -->
       <td>Keterangan</td>
       <td>:</td>
-      <td></td>
+      <td><?php if($user->ket_siswa == '1'){echo "Yatim";}else if ($user->ket_siswa == '2'){echo "Piatu";}else if ($user->ket_siswa == '3'){echo "Yatim Piatu";}else if($user->ket_siswa == '4'){echo "Lengkap";}?></td>
     </tr>
   </table>
   <br>
@@ -143,17 +143,17 @@
       <td>Orang Tua</td>
       <td>:</td>
       <td>Ayah</td>
-      <td><?php echo ucwords($user->nama_ayah); ?></td>
+      <td><?php echo ucwords($ortu->ayah_nama); ?></td>
       <td>Ibu</td>
-      <td><?php echo ucwords($user->nama_ibu); ?></td>
+      <td><?php echo ucwords($ortu->ibu_nama); ?></td>
     </tr>
     <tr>
       <td>Tempat Tanggal Lahir</td>
       <td>:</td>
       <td>Ayah</td>
-      <td></td>
+      <td><?php echo $ortu->ayah_tmp_lahir.", ".date('d-m-Y', strtotime($ortu->ayah_tgl_lahir));?></td>
       <td>Ibu</td>
-      <td></td>
+        <td><?php echo $ortu->ibu_tmp_lahir.", ".date('d-m-Y', strtotime($ortu->ibu_tgl_lahir));?></td>
     </tr>
     <tr>
       <td>Pekerjaan</td>
@@ -179,14 +179,14 @@
       <td>Ibu</td>
       <td></td>
     </tr>
-    <tr>
-      <td>Penghasilan</td>
-      <td>:</td>
-      <td>Ayah</td>
-      <td>Rp</td>
-      <td>Ibu</td>
-      <td>Rp</td>
-    </tr>
+<!--    <tr>-->
+<!--      <td>Penghasilan</td>-->
+<!--      <td>:</td>-->
+<!--      <td>Ayah</td>-->
+<!--      <td>Rp</td>-->
+<!--      <td>Ibu</td>-->
+<!--      <td>Rp</td>-->
+<!--    </tr>-->
     <!-- WALI -->
     <tr>
       <td>Nama Wali</td>
@@ -279,7 +279,6 @@
     </tr>
   </table>
 
-  <br><br>
 
   <b><u>Siapkan Berkas Berikut Ketika anda melakukan verifikasi :</u></b>
   <br>

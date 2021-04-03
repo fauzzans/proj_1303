@@ -82,7 +82,7 @@ $sub_menu3 = strtolower($this->uri->segment(3));
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown dropdown-user">
 					<a class="dropdown-toggle" data-toggle="dropdown">
-						<img src="assets/panel/images/default.png" alt="foto">
+						<img src="img/ava.jpg" alt="foto">
 						<span><?php echo ucwords($nama); ?></span>
 						<i class="caret"></i>
 					</a>
@@ -119,7 +119,7 @@ $sub_menu3 = strtolower($this->uri->segment(3));
 
 						<div class="category-content sidebar-user">
 							<div class="media">
-								<a href="panel_siswa/biodata" class="media-left"><img src="assets/panel/images/default.png" class="img-circle img-sm" alt="foto"></a>
+								<a href="panel_siswa/biodata" class="media-left"><img src="img/ava.jpg" class="img-circle img-sm" alt="foto"></a>
 								<div class="media-body">
 									<span class="media-heading text-semibold"><?php echo ucwords($nama); ?></span>
 									<div class="text-size-mini text-muted">
@@ -135,17 +135,17 @@ $sub_menu3 = strtolower($this->uri->segment(3));
 								<!-- Main -->
 								<li class="navigation-header"><span>Utama</span> <i class="icon-menu" title="Main pages"></i></li>
 								<li class="<?php if($menu == 'panel_siswa' AND $sub_menu == ''){echo 'active';} ?>"><a href="panel_siswa"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
-								<li class="<?php if($menu == 'panel_siswa' AND $sub_menu == 'pengumuman'){echo 'active';} ?>"><a href="panel_siswa/pengumuman"><i class="glyphicon glyphicon-bullhorn"></i> <span>Pengumuman</span></a></li>
+<!--								<li class="--><?php //if($menu == 'panel_siswa' AND $sub_menu == 'pengumuman'){echo 'active';} ?><!--"><a href="panel_siswa/pengumuman"><i class="glyphicon glyphicon-bullhorn"></i> <span>Pengumuman</span></a></li>-->
 								<li class="<?php if($menu == 'panel_siswa' AND $sub_menu == 'biodata'){echo 'active';} ?>"><a href="panel_siswa/biodata"><i class="icon-file-check2"></i> <span>Biodata Pendaftaran</span></a></li>
 
 								<li><a href="panel_siswa/cetak" target="_blank"><i class="icon-printer2"></i> <span>Cetak Bukti Pendaftaran</span></a></li>
-								<li><a href="panel_siswa/rekap_nilai" target="_blank"><i class="icon-printer4"></i> <span>Rekap Nilai</span></a></li>
+<!--								<li><a href="panel_siswa/rekap_nilai" target="_blank"><i class="icon-printer4"></i> <span>Rekap Nilai</span></a></li>-->
 
 								<!-- /Main -->
 
 								<!-- Data Lainnya -->
 								<li class="navigation-header"><span>Lainnya</span> <i class="icon-menu" title="Data visualization"></i></li>
-								<li><a href="files/Panduan_PPDB_Online_SMKPlusAlMaftuh.pdf"><i class="icon-file-download2"></i> <span>Download Panduan</span></a></li>
+<!--								<li><a href="files/Panduan_PPDB_Online_SMKPlusAlMaftuh.pdf"><i class="icon-file-download2"></i> <span>Download Panduan</span></a></li>-->
 								<li><a href="panel_siswa/logout"><i class="icon-switch2"></i> <span>Keluar</span></a></li>
 								<!-- /Data Lainnya -->
 

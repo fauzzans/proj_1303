@@ -4,35 +4,35 @@
   </div>
   <div class="panel-body">
 
-    <div class="form-group" style="padding-bottom:30px;">
-        <label class="col-sm-3 control-label"style="text-align:right; margin-top:6px">N.I.S <span class="text-danger">*</span></label>
-        <div class="col-sm-9 prepend-icon" style="margin-top:1px;">
-          <input type="text" name="nis" class="form-control bg-blue class" onkeypress="return hanyaAngka(this);" maxlength="30" placeholder="Nomor Induk Siswa" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nis"]' required>
-          <i class="fa fa-users" style="margin-left:15px;"></i>
-          <div id="error-nis" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
-          <div id="pesan_komentar">*Sesuai dengan data dari rapot</div>
-        </div>
-    </div>
-
-  <div class="form-group" style="padding-bottom:30px;">
-      <label class="col-sm-3 control-label"style="text-align:right; margin-top:6px">N.I.S.N <span class="text-danger">*</span></label>
-      <div class="col-sm-9 prepend-icon" style="margin-top:1px;">
-        <input type="text" name="nisn" class="form-control bg-blue class" onkeypress="return hanyaAngka(this);" maxlength="30" placeholder="Nomor Induk Siswa Nasional" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nisn"]' required>
-        <i class="fa fa-users" style="margin-left:15px;"></i>
-        <div id="error-nisn" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
-        <div id="pesan_komentar">*Sesuai dengan data dari web  http://nisn.data.kemdikbud.go.id</div>
-      </div>
-  </div>
-
-  <div class="form-group" style="padding-bottom:30px;">
-      <label class="col-sm-3 control-label"style="text-align:right; margin-top:6px">N.I.K <span class="text-danger">*</span></label>
-      <div class="col-sm-9 prepend-icon" style="margin-top:1px;">
-        <input type="text" name="nik" class="form-control bg-blue class" onkeypress="return hanyaAngka(this);" maxlength="30" placeholder="NIK" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nik"]' required>
-        <i class="fa fa-users" style="margin-left:15px;"></i>
-        <div id="error-nik" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
-        <div id="pesan_komentar">*Sesuai dengan Kartu Keluarga (KK)</div>
-      </div>
-  </div>
+<!--    <div class="form-group" style="padding-bottom:30px;">-->
+<!--        <label class="col-sm-3 control-label"style="text-align:right; margin-top:6px">N.I.S <span class="text-danger">*</span></label>-->
+<!--        <div class="col-sm-9 prepend-icon" style="margin-top:1px;">-->
+<!--          <input type="text" name="nis" class="form-control bg-blue class" onkeypress="return hanyaAngka(this);" maxlength="30" placeholder="Nomor Induk Siswa" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nis"]' required>-->
+<!--          <i class="fa fa-users" style="margin-left:15px;"></i>-->
+<!--          <div id="error-nis" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>-->
+<!--          <div id="pesan_komentar">*Sesuai dengan data dari rapot</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!--  <div class="form-group" style="padding-bottom:30px;">-->
+<!--      <label class="col-sm-3 control-label"style="text-align:right; margin-top:6px">N.I.S.N <span class="text-danger">*</span></label>-->
+<!--      <div class="col-sm-9 prepend-icon" style="margin-top:1px;">-->
+<!--        <input type="text" name="nisn" class="form-control bg-blue class" onkeypress="return hanyaAngka(this);" maxlength="30" placeholder="Nomor Induk Siswa Nasional" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nisn"]' required>-->
+<!--        <i class="fa fa-users" style="margin-left:15px;"></i>-->
+<!--        <div id="error-nisn" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>-->
+<!--        <div id="pesan_komentar">*Sesuai dengan data dari web  http://nisn.data.kemdikbud.go.id</div>-->
+<!--      </div>-->
+<!--  </div>-->
+<!---->
+<!--  <div class="form-group" style="padding-bottom:30px;">-->
+<!--      <label class="col-sm-3 control-label"style="text-align:right; margin-top:6px">N.I.K <span class="text-danger">*</span></label>-->
+<!--      <div class="col-sm-9 prepend-icon" style="margin-top:1px;">-->
+<!--        <input type="text" name="nik" class="form-control bg-blue class" onkeypress="return hanyaAngka(this);" maxlength="30" placeholder="NIK" data-parsley-group="block1" data-parsley-errors-container='div[id="error-nik"]' required>-->
+<!--        <i class="fa fa-users" style="margin-left:15px;"></i>-->
+<!--        <div id="error-nik" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>-->
+<!--        <div id="pesan_komentar">*Sesuai dengan Kartu Keluarga (KK)</div>-->
+<!--      </div>-->
+<!--  </div>-->
 
   <div class="form-group" style="padding-bottom:30px;">
       <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Nama Lengkap <span class="text-danger">*</span></label>
@@ -50,12 +50,12 @@
 
       <div class="radio" style="margin-top:3px;margin-left:-20px;">
           <label>
-          <input type="radio" value="Laki-Laki" name="jk" data-parsley-group="block1" data-radio="iradio_square-blue" data-parsley-errors-container='div[id="condition-error"]' required> <i class="fa fa-male"></i> &nbsp;Laki-laki
+          <input type="radio" value="1" name="jenis_kelamin" data-parsley-group="block1" data-radio="iradio_square-blue" data-parsley-errors-container='div[id="condition-error"]' required> <i class="fa fa-male"></i> &nbsp;Laki-laki
           </label>
         </div>
         <div class="radio" style="margin-left:-20px;">
           <label>
-          <input type="radio" value="Perempuan" name="jk" data-parsley-group="block1" data-radio="iradio_square-blue" data-parsley-errors-container='div[id="condition-error"]' required> <i class="fa fa-female"></i> &nbsp;Perempuan
+          <input type="radio" value="2" name="jenis_kelamin" data-parsley-group="block1" data-radio="iradio_square-blue" data-parsley-errors-container='div[id="condition-error"]' required> <i class="fa fa-female"></i> &nbsp;Perempuan
           </label>
         </div>
         <div id="condition-error" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
@@ -119,35 +119,76 @@
     </div>
 </div>
 
-<div class="form-group">
-    <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Agama <span class="text-danger">*</span></label>
-    <div class="col-sm-9" style="margin-top:3px;">
-      <select class="form-control bg-blue class" data-placeholder="Pilih Agama yang dianut" name="agama" data-parsley-group="block1" data-parsley-errors-container='div[id="error-agama"]' required>
-              <option value="">Pilih agama yang dianut</option>
-              <option value="Islam">Islam</option>
-              <option value="Kristen">Kristen</option>
-              <option value="Katolik">Katolik</option>
-              <option value="Kristen Protestan">Kristen Protestan</option>
-              <option value="Hindu">Hindu</option>
-              <option value="Budha">Budha</option>
-              <option value="Konghucu">Konghucu</option>
-              <option value="lainnya">Lainnya</option>
-      </select>
-      <div id="error-agama" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
-    </div>
-</div>
+      <div class="form-group">
+          <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Anak Ke (berapa) <span class="text-danger">*</span></label>
+          <div class="col-sm-9" >
+              <div class="col-sm-4"  style="padding:0px;">
+                  <input type="text" name="anak_ke" class="form-control bg-blue class" placeholder="Anak Ke (berapa)" data-parsley-group="block1" data-parsley-errors-container='div[id="error-anak_ke"]' required>
+                  <!--                  <i class="fa fa-group" style="margin-left:15px;"></i>-->
+                  <div id="error-anak_ke" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+              </div>
+          </div>
+      </div>
 
-<div class="form-group">
-    <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Status dalam Keluarga <span class="text-danger">*</span></label>
-    <div class="col-sm-9" style="margin-top:3px;">
-      <select class="form-control bg-blue class" data-placeholder="Pilih Status dalam Keluarga" name="status_keluarga" data-parsley-group="block1" data-parsley-errors-container='div[id="error-status_keluarga"]' required>
-              <option value="">Pilih Status dalam Keluarga</option>
-              <option value="Anak Kandung">Anak Kandung</option>
-              <option value="Anak Angkat">Anak Angkat</option>
-      </select>
-      <div id="error-status_keluarga" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
-    </div>
-</div>
+      <div class="form-group" >
+          <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Jumlah Saudara <span class="text-danger">*</span></label>
+          <div class="col-sm-9" style="margin-top:3px;">
+              <div class="col-sm-2" style="padding:0px">
+                  <label class="col-sm-12 control-label" style="text-align:right; margin-top:6px">Kandung</label>
+              </div>
+              <div class="col-sm-4"  style="padding-left:3px;">
+                  <input type="text" name="jml_saudara_knd" class="form-control bg-blue class" placeholder="Jumlah Saudara Kandung" data-parsley-group="block1" data-parsley-errors-container='div[id="error-jml_saudara_knd"]' required>
+                  <!--                  <i class="fa fa-group" style="margin-left:15px;"></i>-->
+                  <div id="error-jml_saudara_knd" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+              </div>
+
+          </div>
+      </div>
+
+      <div class="form-group" >
+          <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px"></label>
+          <div class="col-sm-9" style="margin-top:3px;">
+              <div class="col-sm-2" style="padding:0px">
+                  <label class="col-sm-12 control-label" style="text-align:right; margin-top:6px">Tiri</label>
+              </div>
+              <div class="col-sm-4"  style="padding-left:3px;">
+                  <input type="text" name="jml_saudara_tiri" class="form-control bg-blue class" placeholder="Jumlah Saudara Tiri" data-parsley-group="block1" data-parsley-errors-container='div[id="error-jml_saudara_tiri"]' required>
+                  <!--                  <i class="fa fa-group" style="margin-left:15px;"></i>-->
+                  <div id="error-jml_saudara_tiri" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+              </div>
+
+          </div>
+      </div>
+
+<!--<div class="form-group">-->
+<!--    <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Agama <span class="text-danger">*</span></label>-->
+<!--    <div class="col-sm-9" style="margin-top:3px;">-->
+<!--      <select class="form-control bg-blue class" data-placeholder="Pilih Agama yang dianut" name="agama" data-parsley-group="block1" data-parsley-errors-container='div[id="error-agama"]' required>-->
+<!--              <option value="">Pilih agama yang dianut</option>-->
+<!--              <option value="Islam">Islam</option>-->
+<!--              <option value="Kristen">Kristen</option>-->
+<!--              <option value="Katolik">Katolik</option>-->
+<!--              <option value="Kristen Protestan">Kristen Protestan</option>-->
+<!--              <option value="Hindu">Hindu</option>-->
+<!--              <option value="Budha">Budha</option>-->
+<!--              <option value="Konghucu">Konghucu</option>-->
+<!--              <option value="lainnya">Lainnya</option>-->
+<!--      </select>-->
+<!--      <div id="error-agama" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>-->
+<!--    </div>-->
+<!--</div>-->
+<!---->
+<!--<div class="form-group">-->
+<!--    <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Status dalam Keluarga <span class="text-danger">*</span></label>-->
+<!--    <div class="col-sm-9" style="margin-top:3px;">-->
+<!--      <select class="form-control bg-blue class" data-placeholder="Pilih Status dalam Keluarga" name="status_keluarga" data-parsley-group="block1" data-parsley-errors-container='div[id="error-status_keluarga"]' required>-->
+<!--              <option value="">Pilih Status dalam Keluarga</option>-->
+<!--              <option value="Anak Kandung">Anak Kandung</option>-->
+<!--              <option value="Anak Angkat">Anak Angkat</option>-->
+<!--      </select>-->
+<!--      <div id="error-status_keluarga" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
         <div class="form-group" >
@@ -158,15 +199,60 @@
               <div id="error-alamat_siswa" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
             </div>
         </div>
+      <div class="form-group" >
+          <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px"></label>
+          <div class="col-sm-9" style="margin-top:3px;">
+              <div class="col-sm-4" style="padding:0px">
+                  <select class="form-control bg-blue class"  name="kd_kabupaten" id="postKab" data-parsley-group="block1" data-parsley-errors-container='div[id="error-kd_kabupaten"]' required>
+                      <option value="" selected>Pilih Kab/Kota</option>
+                      <?php foreach ($v_kabupaten as $valueKabupaten) { ?>
+                          <option value="<?php echo $valueKabupaten->kd_provinsi.'.'.$valueKabupaten->kd_kabupaten; ?>"><?php echo $valueKabupaten->nm_kabupaten; ?></option>
+                      <?php } ?>
+                  </select>
+                  <div id="error-kd_kabupaten" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+              </div>
+              <div class="col-sm-4"  style="padding-left:3px;" id="list">
+                  <select class="form-control bg-blue class" name="kd_kecamatan" id="postKec" data-parsley-group="block1" data-parsley-errors-container='div[id="error-kd_kecamatan"]' required>
+                      <option value="" selected>Pilih Kecamatan</option>
+                  </select>
+                  <div id="error-kd_kecamatan" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+              </div>
+              <div class="col-sm-4" style="margin-left:-27px;" id="list2">
 
-        <div class="form-group" >
-            <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">No. Handphone <span class="text-danger">*</span></label>
-            <div class="col-sm-9 prepend-icon" style="margin-top:3px;">
-              <input type="text" name="no_hp_siswa" class="form-control bg-blue class" maxlength="14" onkeypress="return hanyaAngka(this);" placeholder="No. Handphone Calon Siswa" data-parsley-group="block1" data-parsley-errors-container='div[id="error-no_hp_siswa"]' required>
+                  <select class="form-control bg-blue class" name="kd_kelurahan" id="postKel" data-parsley-group="block1" data-parsley-errors-container='div[id="error-kd_kelurahan"]' required>
+                      <option value="" selected>Pilih Kelurahan</option>
+                  </select>
+                  <div id="error-kd_kelurahan" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+              </div>
+
+          </div>
+      </div>
+
+      <div class="form-group" >
+          <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">No. Telpon <span class="text-danger">*</span></label>
+          <div class="col-sm-9 prepend-icon" style="margin-top:3px;">
+              <input type="text" name="no_telp" class="form-control bg-blue class" maxlength="14" onkeypress="return hanyaAngka(this);" placeholder="No. Telpon Calon Siswa" data-parsley-group="block1" data-parsley-errors-container='div[id="error-no_telp"]' required>
               <i class="fa fa-phone" style="margin-left:15px;"></i>
-              <div id="error-no_hp_siswa" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
-            </div>
-        </div>
+              <div id="error-no_telp" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+          </div>
+      </div>
+
+      <div class="form-group" >
+          <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Keterangan <span class="text-danger">*</span></label>
+          <div class="col-sm-9" style="margin-top:3px;">
+              <div class="col-sm-6"  style="padding-left:3px;">
+                  <select class="form-control bg-blue class" data-placeholder="Keterangan Siswa" name="ket_siswa" data-parsley-group="block1" data-parsley-errors-container='div[id="error-ket_siswa"]' required>
+                      <option value="" selected>Pilih Keterangan Siswa</option>
+                      <option value="1">Anak Yatim</option>
+                      <option value="2">Piatu</option>
+                      <option value="3">Yatim Piatu</option>
+                      <option value="4">Lengkap</option>
+                  </select>
+                  <div id="error-ket_siswa" style=" background:#FFBABA;color: #D8000C; width:auto;border-radius:5px;padding-left:10px;"></div>
+              </div>
+
+          </div>
+      </div>
 
       </div>
     </div>

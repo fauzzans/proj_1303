@@ -9,7 +9,7 @@ class Panel_siswa extends CI_Controller {
 		if(!isset($ceks)) {
 			redirect('');
 		}else{
-			$data['user']   	 = $this->db->get_where('tbl_siswa', "no_pendaftaran='$ceks'");
+			$data['user']   	 = $this->db->get_where('calon_siswa', "no_pendaftaran='$ceks'");
 			$data['judul_web'] = "Dashboard";
 
 			$this->load->view('siswa/header', $data);
@@ -39,7 +39,9 @@ class Panel_siswa extends CI_Controller {
 		if(!isset($ceks)) {
 			redirect('logcs');
 		}else{
-			$data['user']  			  = $this->db->get_where('tbl_siswa', "no_pendaftaran='$ceks'");
+			$data['user']  			  = $this->db->get_where('calon_siswa', "no_pendaftaran='$ceks'");
+			$id_cln_siswa = $data['user']->row()->id_cln_siswa;
+			$data['ortu']           = $this->db->get_where('orng_tua_siswa', "id_cln_siswa = '$id_cln_siswa'");
  			$data['judul_web'] 		= "Biodata ".ucwords($data['user']->row()->nama_lengkap);
 
 					$this->load->view('siswa/header', $data);
@@ -54,7 +56,14 @@ class Panel_siswa extends CI_Controller {
 		if(!isset($ceks)) {
 			redirect('logcs');
 		}
-		$data['user'] 			= $this->db->get_where('tbl_siswa', "no_pendaftaran='$ceks'")->row();
+		$data['user'] 			= $this->db->get_where('calon_siswa', "no_pendaftaran='$ceks'")->row();
+        $id_cln_siswa = $data['user']->id_cln_siswa;
+
+//        $this->db->join('tbl_pekerjaan', 'orang_tua_siswa.')
+        $this->db->where('id_cln_siswa', $id_cln_siswa);
+        $data['ortu']           = $this->db->get('orng_tua_siswa')->row();
+
+        $data['sekolah']           = $this->db->get_where('sekolah_asal', "id_cln_siswa = '$id_cln_siswa'")->row();
 		$data['judul_web'] 	= "Cetak Bukti Pendaftaran ".ucwords($data['user']->nama_lengkap);
 
 		$data['thn_ppdb'] 	= date('Y', strtotime($data['user']->tgl_siswa));

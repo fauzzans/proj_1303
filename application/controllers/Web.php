@@ -116,11 +116,15 @@ class Web extends CI_Controller
 		$this->db->group_by('nama_pekerjaan');
 		$data['v_pekerjaan_wali'] = $this->db->get('tbl_pekerjaan')->result();
 
+        $this->db->where('kd_provinsi', '32');
+        $this->db->order_by('kd_provinsi', 'ASC');
+        $data['v_kabupaten'] = $this->db->get('ref_kabupaten')->result();
+
 		$this->load->view('web/pendaftaran', $data);
 
 		if (isset($_POST['btndaftar'])) {
-			$this->db->order_by('id_siswa', 'DESC');
-			$sql 		= $this->db->get('tbl_siswa');
+			$this->db->order_by('id_cln_siswa', 'DESC');
+			$sql 		= $this->db->get('calon_siswa');
 			if ($sql->num_rows() == 0) {
 				$no_pendaftaran   = "PSB18004001";
 			} else {
@@ -129,187 +133,221 @@ class Web extends CI_Controller
 				$no_pendaftaran	  = "PSB18004" . sprintf("%03s", $noUrut);
 			}
 
-			$nis							= $this->input->post('nis');
-			$nisn							= $this->input->post('nisn');
-			$nik							= $this->input->post('nik');
+			$nisn					= $this->input->post('nisn');
 			$nama_lengkap			= $this->input->post('nama_lengkap');
-			$jk								= $this->input->post('jk');
+            $jenis_kelamin			= $this->input->post('jenis_kelamin');
 			$tempat_lahir			= $this->input->post('tempat_lahir');
-			$tgl_lahir				= $this->input->post('tgl_lahir') . "-" . $this->input->post('bln_lahir') . "-" . $this->input->post('thn_lahir');
-			$agama						= $this->input->post('agama');
-			$status_keluarga	= $this->input->post('status_keluarga');
+			$tgl_lahir				= $this->input->post('thn_lahir') . "-" . $this->input->post('bln_lahir') . "-" . $this->input->post('tgl_lahir');
+			$anak_ke				= $this->input->post('anak_ke');
+            $jml_saudara_knd     	= $this->input->post('jml_saudara_knd');
+			$jml_saudara_tiri		= $this->input->post('jml_saudara_tiri');
 			$alamat_siswa			= $this->input->post('alamat_siswa');
-			$no_hp_siswa			= $this->input->post('no_hp_siswa');
-			$nama_ayah				= $this->input->post('nama_ayah');
-			$pdd_ayah					= $this->input->post('pdd_ayah');
-			$pekerjaan_ayah		= $this->input->post('pekerjaan_ayah');
-			$penghasilan_ayah	= $this->input->post('penghasilan_ayah');
-			$no_hp_ayah				= $this->input->post('no_hp_ayah');
-			$nama_ibu					= $this->input->post('nama_ibu');
-			$pdd_ibu					= $this->input->post('pdd_ibu');
-			$pekerjaan_ibu		= $this->input->post('pekerjaan_ibu');
-			$penghasilan_ibu	= $this->input->post('penghasilan_ibu');
-			$no_hp_ibu				= $this->input->post('no_hp_ibu');
-			$nama_wali				= $this->input->post('nama_wali');
-			$pdd_wali					= $this->input->post('pdd_wali');
-			$pekerjaan_wali		= $this->input->post('pekerjaan_wali');
-			$penghasilan_wali	= $this->input->post('penghasilan_wali');
-			$no_hp_wali				= $this->input->post('no_hp_wali');
-			$npsn							= $this->input->post('npsn');
-			$nama_sekolah			= $this->input->post('nama_sekolah');
-			$status_sekolah		= $this->input->post('status_sekolah');
-			$model_un					= $this->input->post('model_un');
-			$alamat_sekolah		= $this->input->post('alamat_sekolah');
-			$thn_lulus				= $this->input->post('thn_lulus');
-			$rayonisasi				= $this->input->post('rayonisasi');
-			$tgl_siswa				= $this->Model_data->date('waktu_default');
+			$get        			= explode(".", $this->input->post('kd_kelurahan'));
+			$kd_provinsi            = $get[0];
+			$kd_kabupaten           = $get[1];
+			$kd_kecamatan           = $get[2];
+			$kd_kelurahan           = $get[3];
+			$no_telp				= $this->input->post('no_telp');
+			$ket_siswa      		= $this->input->post('ket_siswa');
 
-			if ($_POST['total_nilai'] < 75) {
-				$this->session->set_flashdata(
-					'msg',
-					'
-					<div class="alert alert-warning alert-dismissible" role="alert">
-						 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							 <span aria-hidden="true">&times;&nbsp; &nbsp;</span>
-						 </button>
-						 <strong>Gagal Mendaftar PPDB Online!</strong> Maaf <b>' . $nama_lengkap . '</b> tidak bisa mendaftar PPDB dikarenakan Total nilai Rata-Rata Rapor kurang dari 75. Terimakasih.
-					</div>'
-				);
-				redirect('pendaftaran');
-			}
 
-			$data = array(
-				'no_pendaftaran'		=> $no_pendaftaran,
-				'password'				  => $nisn,
-				'nis'					  		=> $nis,
-				'nisn'				  		=> $nisn,
-				'nik'				  			=> $nik,
-				'nama_lengkap'			=> $nama_lengkap,
-				'jk'				  			=> $jk,
-				'tempat_lahir'			=> $tempat_lahir,
-				'tgl_lahir'				  => $tgl_lahir,
-				'agama'				  	  => $agama,
-				'status_keluarga'		=> $status_keluarga,
-				'alamat_siswa'			=> $alamat_siswa,
-				'no_hp_siswa'				=> $no_hp_siswa,
-				'nama_ayah'				  => $nama_ayah,
-				'pdd_ayah'				  => $pdd_ayah,
-				'pekerjaan_ayah'		=> $pekerjaan_ayah,
-				'penghasilan_ayah'	=> $penghasilan_ayah,
-				'no_hp_ayah'				=> $no_hp_ayah,
-				'nama_ibu'				  => $nama_ibu,
-				'pdd_ibu'				  	=> $pdd_ibu,
-				'pekerjaan_ibu'			=> $pekerjaan_ibu,
-				'penghasilan_ibu'		=> $penghasilan_ibu,
-				'no_hp_ibu'				  => $no_hp_ibu,
-				'nama_wali'				  => $nama_wali,
-				'pdd_wali'				  => $pdd_wali,
-				'pekerjaan_wali'		=> $pekerjaan_wali,
-				'penghasilan_wali'	=> $penghasilan_wali,
-				'no_hp_wali'				=> $no_hp_wali,
-				'npsn_sekolah'  	  => $npsn,
-				'nama_sekolah'			=> $nama_sekolah,
-				'status_sekolah'		=> $status_sekolah,
-				'model_un'				  => $model_un,
-				'alamat_sekolah'		=> $alamat_sekolah,
-				'thn_lulus'				  => $thn_lulus,
-				'rayonisasi'				=> $rayonisasi,
-				'tgl_siswa'				  => $tgl_siswa
-			);
-			$this->db->insert('tbl_siswa', $data);
+			$ayah_nama          	= $this->input->post('ayah_nama');
+			$ayah_tmp_lahir			= $this->input->post('ayah_tmp_lahir');
+            $ayah_tgl_lahir			= $this->input->post('ayah_thn_lahir') . "-" . $this->input->post('ayah_bln_lahir') . "-" . $this->input->post('ayah_tgl_lahir');
+			$ayah_pekerjaan			= $this->input->post('ayah_pekerjaan');
+			$ayah_pendidikan		= $this->input->post('ayah_pendidikan');
+			$ayah_agama     		= $this->input->post('ayah_agama');
+			$ayah_alamat        	= $this->input->post('ayah_alamat');
+			$get2           		= explode(".", $this->input->post('ayah_kd_kelurahan'));
+			$ayah_kd_provinsi       = $get2[0];
+			$ayah_kd_kabupaten      = $get2[1];
+			$ayah_kd_kecamatan      = $get2[2];
+			$ayah_kd_kelurahan      = $get2[3];
 
-			for ($i = 1; $i <= 5; $i++) {
-				if ($i == 1) {
-					$mapel = 'Ilmu Pengetahuan Alam (IPA)';
-					$smstr = 'ipa';
-				} elseif ($i == 2) {
-					$mapel = 'Ilmu Pengetahuan Sosial (IPS)';
-					$smstr = 'ips';
-				} elseif ($i == 3) {
-					$mapel = 'Matematika';
-					$smstr = 'mtk';
-				} elseif ($i == 4) {
-					$mapel = 'Bahasa Indonesia';
-					$smstr = 'ind';
-				} elseif ($i == 5) {
-					$mapel = 'Bahasa Inggris';
-					$smstr = 'ing';
-				}
-				$data2 = array(
-					'mapel'				 		=> $mapel,
-					'semester1'		 		=> $this->input->post($smstr . "1"),
-					'semester2'				=> $this->input->post($smstr . "2"),
-					'semester3'				=> $this->input->post($smstr . "3"),
-					'semester4'				=> $this->input->post($smstr . "4"),
-					'semester5'				=> $this->input->post($smstr . "5"),
-					'rata_rata_nilai'	=> $this->input->post("nilai_" . $smstr),
-					'no_pendaftaran'	=> $no_pendaftaran
-				);
-				$this->db->insert('tbl_rapor', $data2);
-			}
 
-			for ($i = 1; $i <= 7; $i++) {
-				if ($i == 1) {
-					$mapel = 'Pendidikan Agama';
-					$nilai = 'agama';
-				} elseif ($i == 2) {
-					$mapel = 'PKN';
-					$nilai = 'pkn';
-				} elseif ($i == 3) {
-					$mapel = 'Bahasa Indonesia';
-					$nilai = 'ind';
-				} elseif ($i == 4) {
-					$mapel = 'Bahasa Inggris';
-					$nilai = 'ing';
-				} elseif ($i == 5) {
-					$mapel = 'Matematika';
-					$nilai = 'mtk';
-				} elseif ($i == 6) {
-					$mapel = 'Ilmu Pengetahuan Alam (IPA)';
-					$nilai = 'ipa';
-				} elseif ($i == 7) {
-					$mapel = 'Ilmu Pengetahuan Sosial (IPS)';
-					$nilai = 'ipa';
-				}
-				$data3 = array(
-					'mapel_usbn'			=> $mapel,
-					'nilai_usbn'			=> $this->input->post("usbn_" . $nilai),
-					'no_pendaftaran'	=> $no_pendaftaran
-				);
-				$this->db->insert('tbl_nilai_usbn', $data3);
-			}
+			$ibu_nama				= $this->input->post('ibu_nama');
+			$ibu_tmp_lahir			= $this->input->post('ibu_tmp_lahir');
+            $ibu_tgl_lahir			= $this->input->post('ibu_thn_lahir') . "-" . $this->input->post('ibu_bln_lahir') . "-" . $this->input->post('ibu_tgl_lahir');
+			$ibu_pekerjaan  		= $this->input->post('ibu_pekerjaan');
+			$ibu_pendidikan     	= $this->input->post('ibu_pendidikan');
+			$ibu_agama				= $this->input->post('ibu_agama');
+			$ibu_alamat				= $this->input->post('ibu_alamat');
+			$get3           		= explode(".", $this->input->post('ibu_kd_kelurahan'));
+			$ibu_kd_provinsi        = $get3[0];
+			$ibu_kd_kabupaten       = $get3[1];
+			$ibu_kd_kecamatan       = $get3[2];
+			$ibu_kd_kelurahan       = $get3[3];
 
-			for ($i = 1; $i <= 4; $i++) {
-				if ($i == 1) {
-					$mapel = 'Ilmu Pengetahuan Alam (IPA)';
-					$nilai = 'ipa';
-				} elseif ($i == 2) {
-					$mapel = 'Matematika';
-					$nilai = 'mtk';
-				} elseif ($i == 3) {
-					$mapel = 'Bahasa Indonesia';
-					$nilai = 'ind';
-				} elseif ($i == 4) {
-					$mapel = 'Bahasa Inggris';
-					$nilai = 'ing';
-				}
-				$data4 = array(
-					'mapel_unbk'			=> $mapel,
-					'nilai_unbk'			=> $this->input->post("unbk_" . $nilai),
-					'no_pendaftaran'	=> $no_pendaftaran
-				);
-				$this->db->insert('tbl_nilai_unbk', $data4);
-			}
 
-			// $this->session->set_flashdata('msg',
-			// 	'
-			// 	<div class="alert alert-success alert-dismissible" role="alert">
-			// 		 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			// 			 <span aria-hidden="true">&times;&nbsp; &nbsp;</span>
-			// 		 </button>
-			// 		 <strong>Sukses!</strong> Berhasil ditambahkan.
-			// 	</div>'
-			// );
+			$wali_nama      		= $this->input->post('wali_nama');
+			$wali_pekerjaan			= $this->input->post('wali_pekerjaan');
+			$wali_pendidikan		= $this->input->post('wali_pendidikan');
+			$wali_agama				= $this->input->post('wali_agama');
+			$hbg_dng_anak			= $this->input->post('hbg_dng_anak');
+			$wali_alamat			= $this->input->post('wali_alamat');
+            $get4       			= explode(".", $this->input->post('wali_kd_kelurahan'));
+
+			if (!isset($get4)) {
+                $wali_kd_provinsi       = $get4[0];
+                $wali_kd_kabupaten      = $get4[1];
+                $wali_kd_kecamatan      = $get4[2];
+                $wali_kd_kelurahan      = $get4[3];
+            } else {
+			    $wali_kd_provinsi = '00';
+			    $wali_kd_kabupaten = '00';
+			    $wali_kd_kecamatan = '00';
+			    $wali_kd_kelurahan = '00';
+            }
+
+
+            $jenjang         		= $this->input->post('jenjang');
+            $nama_sekolah			= $this->input->post('nama_sekolah');
+            $no_ijazah	        	= $this->input->post('no_ijazah');
+            $thn_ijazah             = $this->input->post('thn_ijazah');
+            $no_ujian				= $this->input->post('no_ujian');
+            $alamat_sekolah			= $this->input->post('alamat_sekolah');
+            $get5           		= explode(".", $this->Model_data->date('skl_kd_kelurahan'));
+
+            if (!isset($get5)) {
+                $skl_kd_provinsi = $get5[0];
+                $skl_kd_kabupaten = $get5[1];
+                $skl_kd_kecamatan = $get5[2];
+                $skl_kd_kelurahan = $get5[3];
+            } else {
+                $skl_kd_provinsi = '00';
+                $skl_kd_kabupaten = '00';
+                $skl_kd_kecamatan = '00';
+                $skl_kd_kelurahan = '00';
+            }
+            $tgl_masuk  			= $this->input->post('tgl_masuk') . "-" . $this->input->post('bln_masuk') . "-" . $this->input->post('thn_masuk');
+            $thn_lulus      		= $this->Model_data->date('thn_lulus');
+
+            $user = array( 'username' => $no_pendaftaran,
+                            'password' => $nisn,
+                            'kd_role' => '3',
+                            'nama_lengkap' => $nama_lengkap,
+                            'created_date' => date('Y-m-d'),
+                            'created_by' => '99',
+                            'updated_date' => date('Y-m-d'),
+                            'updated_by' => '99'
+                        );
+
+            $this->db->select_max('id_user');
+            $max_idUser = $this->db->get('user')->row_array();
+
+            $calon_siswa = array( 'id_user' => $max_idUser['id_user'] + 1,
+                                    'no_pendaftaran' => $no_pendaftaran,
+                                    'nisn' => $nisn,
+                                    'nama_lengkap' => $nama_lengkap,
+                                    'jenis_kelamin' => $jenis_kelamin,
+                                    'tempat_lahir' => $tempat_lahir,
+                                    'tgl_lahir' => $tgl_lahir,
+                                    'anak_ke' => $anak_ke,
+                                    'jml_saudara_knd' => $jml_saudara_knd,
+                                    'jml_saudara_tiri' => $jml_saudara_tiri,
+                                    'alamat_siswa' => $alamat_siswa,
+                                    'kd_provinsi' => $kd_provinsi,
+                                    'kd_kabupaten' => $kd_kabupaten,
+                                    'kd_kecamatan' => $kd_kecamatan,
+                                    'kd_kelurahan' => $kd_kelurahan,
+//                                    'kd_pos' => $kd_pos,
+                                    'no_telp' => $no_telp,
+                                    'ket_siswa' => $ket_siswa,
+                                    'tgl_siswa' => date('Y-m-d H:i:s'),
+                                    'created_date' => date('Y-m-d'),
+                                    'created_by' => '99',
+                                    'updated_date' => date('Y-m-d'),
+                                    'updated_by' => '99'
+                                );
+
+            $this->db->select_max('id_cln_siswa');
+            $max_idSiswa = $this->db->get('calon_siswa')->row_array();
+
+            $orang_tua = array( 'id_cln_siswa' => $max_idSiswa['id_cln_siswa'] + 1,
+                                'ayah_nama' => $ayah_nama,
+                                'ayah_tmp_lahir' => $ayah_tmp_lahir,
+                                'ayah_tgl_lahir' => $ayah_tgl_lahir,
+                                'ayah_pekerjaan' => $ayah_pekerjaan,
+                                'ayah_pendidikan' => $ayah_pendidikan,
+                                'ayah_agama' => $ayah_agama,
+                                'ayah_alamat' => $ayah_alamat,
+                                'ayah_kd_provinsi' => $ayah_kd_provinsi,
+                                'ayah_kd_kabupaten' => $ayah_kd_kabupaten,
+                                'ayah_kd_kecamatan' => $ayah_kd_kecamatan,
+                                'ayah_kd_kelurahan' => $ayah_kd_kelurahan,
+                                'ibu_nama' => $ibu_nama,
+                                'ibu_tmp_lahir' => $ibu_tmp_lahir,
+                                'ibu_tgl_lahir' => $ibu_tgl_lahir,
+                                'ibu_pekerjaan' => $ibu_pekerjaan,
+                                'ibu_pendidikan' => $ibu_pendidikan,
+                                'ibu_agama' => $ibu_agama,
+                                'ibu_alamat' => $ibu_alamat,
+                                'ibu_kd_provinsi' => $ibu_kd_provinsi,
+                                'ibu_kd_kabupaten' => $ibu_kd_kabupaten,
+                                'ibu_kd_kecamatan' => $ibu_kd_kecamatan,
+                                'ibu_kd_kelurahan' => $ibu_kd_kelurahan,
+                                'wali_nama' => $wali_nama,
+                                'wali_pekerjaan' => $wali_pekerjaan,
+                                'wali_pendidikan' => $wali_pendidikan,
+                                'wali_agama' => $wali_agama,
+                                'hbg_dng_anak' => $hbg_dng_anak,
+                                'wali_alamat' => $wali_alamat,
+                                'wali_kd_provinsi' => $wali_kd_provinsi,
+                                'wali_kd_kabupaten' => $wali_kd_kabupaten,
+                                'wali_kd_kecamatan' => $wali_kd_kecamatan,
+                                'wali_kd_kelurahan' => $wali_kd_kelurahan,
+                                'created_date' => date('Y-m-d'),
+                                'created_by' => '99',
+                                'updated_date' => date('Y-m-d'),
+                                'updated_by' => '99'
+                                );
+
+            $sekolah = array( 'id_cln_siswa' => $max_idSiswa['id_cln_siswa'] + 1,
+                                'nama_sekolah' => $nama_sekolah,
+                                'no_ijazah' => $no_ijazah,
+                                'thn_ijazah' => $thn_ijazah,
+                                'no_ujian' => $no_ujian,
+                                'alamat' => $alamat_sekolah,
+                                'kd_kelurahan' => $skl_kd_kelurahan,
+                                'kd_kecamatan' => $skl_kd_kecamatan,
+                                'kd_kabupaten' => $skl_kd_kabupaten,
+                                'kd_provinsi' => $skl_kd_provinsi,
+                                'tgl_masuk' => $tgl_masuk,
+                                'jenjang' => $jenjang,
+                                'created_date' => date('Y-m-d'),
+                                'created_by' => '99',
+                                'updated_date' => date('Y-m-d'),
+                                'updated_by' => '99'
+                            );
+
+//            print_r($user);
+//            echo "<br />";
+//            echo "<br />";
+//            print_r($calon_siswa);
+//            echo "<br />";
+//            echo "<br />";
+//            print_r($orang_tua);
+//            echo "<br />";
+//            echo "<br />";
+//            print_r($sekolah);
+//            die();
+
+
+
+            if ($this->db->insert('calon_siswa', $calon_siswa) && $this->db->insert('orng_tua_siswa', $orang_tua) && $this->db->insert('sekolah_asal', $sekolah) && $this->db->insert('user', $user)) {
+
+                 $this->session->set_flashdata('msg',
+                 	'
+                 	<div class="alert alert-success alert-dismissible" role="alert">
+                 		 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 			 <span aria-hidden="true">&times;&nbsp; &nbsp;</span>
+                 		 </button>
+                 		 <strong>Sukses!</strong> Berhasil ditambahkan.
+                 	</div>'
+                 );
+            }
+
+
 			$this->session->set_userdata('no_pendaftaran', "$no_pendaftaran");
 			redirect('panel_siswa');
 		}
@@ -332,7 +370,7 @@ class Web extends CI_Controller
 				$pass	   = $_POST['password'];
 
 				$this->db->like('tgl_siswa', date('Y'), "after");
-				$query  = $this->db->get_where('tbl_siswa', "no_pendaftaran='$username'");
+				$query  = $this->db->get_where('calon_siswa', "no_pendaftaran='$username'");
 				$cek    = $query->result();
 				$cekun  = $cek[0]->no_pendaftaran;
 				$jumlah = $query->num_rows();
@@ -379,4 +417,30 @@ class Web extends CI_Controller
 	{
 		$this->load->view('404_content');
 	}
+
+    function getKecamatan(){
+        $kd_provinsi = $this->input->post('kd_provinsi');
+        $kd_kabupaten = $this->input->post('kd_kabupaten');
+
+        $this->db->where('kd_provinsi', $kd_provinsi);
+        $this->db->where('kd_kabupaten', $kd_kabupaten);
+        $this->db->order_by('nm_kecamatan', 'ASC');
+        $data = $this->db->get('ref_kecamatan')->result();
+
+        echo json_encode($data);
+    }
+
+    function getKelurahan(){
+        $kd_provinsi = $this->input->post('kd_provinsi');
+        $kd_kabupaten = $this->input->post('kd_kabupaten');
+        $kd_kecamatan = $this->input->post('kd_kecamatan');
+
+        $this->db->where('kd_provinsi', $kd_provinsi);
+        $this->db->where('kd_kabupaten', $kd_kabupaten);
+        $this->db->where('kd_kecamatan', $kd_kecamatan);
+        $this->db->order_by('nm_kelurahan', 'ASC');
+        $data = $this->db->get('ref_kelurahan')->result();
+
+        echo json_encode($data);
+    }
 }

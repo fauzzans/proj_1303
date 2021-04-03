@@ -69,7 +69,7 @@ class Panel_admin extends CI_Controller {
 						 $username = $_POST['username'];
 						 $pass	   = $_POST['password'];
 
-						 $query  = $this->db->get_where('tbl_user', "username='$username'");
+						 $query  = $this->db->get_where('user', "username='$username'");
 						 $cek    = $query->result();
 						 $cekun  = $cek[0]->username;
 						 $jumlah = $query->num_rows();

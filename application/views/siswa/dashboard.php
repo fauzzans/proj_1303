@@ -1,6 +1,6 @@
 <?php
   $cek    = $user->row();
-  $id_user = $cek->id_siswa;
+  $id_user = $cek->id_cln_siswa;
   $nama    = $cek->nama_lengkap;
 
   $tgl = date('m-Y');
@@ -17,7 +17,7 @@
       <div class="panel panel-flat bg-info">
         <div class="panel-heading">
           <h3 class="panel-title">
-            <center>Selamat Datang Calon Siswa SMA Negeri 1 Belitang, <?php echo ucwords($nama); ?></center>
+            <center>Selamat Datang Calon Siswa Pondok Pesantren Darut Tafsir Bogor<br/> <?php echo ucwords($nama); ?></center>
           </h3>
         </div>
       </div>
@@ -43,7 +43,7 @@
                 <h4 class="panel-title">
                   <center>
                     <i class="glyphicon glyphicon-bullhorn"></i> Mohon Maaf <b><?php echo $nama; ?></b>
-                     <span class="label label-danger" style="font-size:20px;">Tidak Lulus</span> 
+                     <span class="label label-danger" style="font-size:20px;">Tidak Lulus</span>
                     Sebagai Calon Peserta Didik Baru <b>SMA Negeri 1 Belitang</b>.
                   </center>
                 </h4>
@@ -52,7 +52,7 @@
           <?php } ?>
           <!-- Quick stats boxes -->
           <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-4">
               <!-- Current server load -->
             <center>
               <a href="panel_siswa/biodata">
@@ -72,7 +72,7 @@
               <!-- /current server load -->
             </div>
 
-            <div class="col-lg-3">
+            <div class="col-lg-4">
               <!-- Current server load -->
             <center>
               <a href="panel_siswa/cetak" target="_blank">
@@ -92,45 +92,45 @@
               <!-- /current server load -->
             </div>
 
-            <div class="col-lg-3">
+<!--            <div class="col-lg-3">-->
               <!-- Current server load -->
-            <center>
-              <a href="panel_siswa/rekap_nilai" target="_blank">
-              <div class="panel bg-blue-400">
-                <div class="panel-body">
-                  <div class="heading-elements">
-                    <span class="heading-text"></span>
-                  </div>
-                  <h1 class="no-margin">
-                    <i class="icon-printer4" style="font-size:200px;"></i>
-                  </h1>
-                  Rekap Nilai
-                </div>
-              </div>
-              </a>
-            </center>
+<!--            <center>-->
+<!--              <a href="panel_siswa/rekap_nilai" target="_blank">-->
+<!--              <div class="panel bg-blue-400">-->
+<!--                <div class="panel-body">-->
+<!--                  <div class="heading-elements">-->
+<!--                    <span class="heading-text"></span>-->
+<!--                  </div>-->
+<!--                  <h1 class="no-margin">-->
+<!--                    <i class="icon-printer4" style="font-size:200px;"></i>-->
+<!--                  </h1>-->
+<!--                  Rekap Nilai-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              </a>-->
+<!--            </center>-->
               <!-- /current server load -->
-            </div>
+<!--            </div>-->
 
-            <div class="col-lg-3">
+<!--            <div class="col-lg-3">-->
               <!-- Current server load -->
-            <center>
-              <a href="files/Panduan_PPDB_Online_SMKPlusAlMaftuh.pdf">
-              <div class="panel bg-orange-400">
-                <div class="panel-body">
-                  <div class="heading-elements">
-                    <span class="heading-text"></span>
-                  </div>
-                  <h1 class="no-margin">
-                    <i class="icon-file-download2" style="font-size:200px;"></i>
-                  </h1>
-                  Download Panduan
-                </div>
-              </div>
-              </a>
-            </center>
+<!--            <center>-->
+<!--              <a href="files/Panduan_PPDB_Online_SMKPlusAlMaftuh.pdf">-->
+<!--              <div class="panel bg-orange-400">-->
+<!--                <div class="panel-body">-->
+<!--                  <div class="heading-elements">-->
+<!--                    <span class="heading-text"></span>-->
+<!--                  </div>-->
+<!--                  <h1 class="no-margin">-->
+<!--                    <i class="icon-file-download2" style="font-size:200px;"></i>-->
+<!--                  </h1>-->
+<!--                  Download Panduan-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              </a>-->
+<!--            </center>-->
               <!-- /current server load -->
-            </div>
+<!--            </div>-->
 
           </div>
           <!-- /quick stats boxes -->

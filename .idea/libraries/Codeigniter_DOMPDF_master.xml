@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Codeigniter-DOMPDF-master">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/application/libraries/Codeigniter-DOMPDF-master.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -162,25 +162,25 @@
                           </div>
                         </fieldset>
 
-                        <fieldset>
-                          <legend>Rayon</legend>
-                          <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                              <?php $this->load->view('web/step/5'); ?>
-                            </div>
-                          </div>
-                        </fieldset>
-
-                        <fieldset>
-                          <legend>Nilai</legend>
-                          <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                              <?php $this->load->view('web/step/6'); ?>
-                            </div>
-                          </div>
-                        </fieldset>
+<!--                        <fieldset>-->
+<!--                          <legend>Rayon</legend>-->
+<!--                          <div class="row">-->
+<!--                            <div class="col-md-2"></div>-->
+<!--                            <div class="col-md-8">-->
+<!--                              --><?php //$this->load->view('web/step/5'); ?>
+<!--                            </div>-->
+<!--                          </div>-->
+<!--                        </fieldset>-->
+<!---->
+<!--                        <fieldset>-->
+<!--                          <legend>Nilai</legend>-->
+<!--                          <div class="row">-->
+<!--                            <div class="col-md-2"></div>-->
+<!--                            <div class="col-md-8">-->
+<!--                              --><?php //$this->load->view('web/step/6'); ?>
+<!--                            </div>-->
+<!--                          </div>-->
+<!--                        </fieldset>-->
 
                         <fieldset>
                           <legend>Konfirmasi</legend>
@@ -317,6 +317,268 @@
         return false;
       return true;
     }
+  </script>
+
+  <script>
+      $('#postKab').change(function() {
+          var value = $("#postKab").val().split(".");
+          var kd_provinsi = value[0];
+          var kd_kabupaten = value[1];
+
+          $.ajax({
+              type: "POST",
+              dataType: "json",
+              data: {
+                  kd_provinsi: kd_provinsi,
+                  kd_kabupaten: kd_kabupaten
+              },
+              url: '<?php echo base_url('Web/getKecamatan'); ?>',
+              success: function(response) {
+                  console.log(response);
+
+                  html = '';
+                  for (i = 0; i < response.length; i++) {
+                      html += '<option value="' + response[i].kd_provinsi + '.' + response[i].kd_kabupaten + '.' + response[i].kd_kecamatan + '">' + response[i].nm_kecamatan + '</option>';
+                  }
+                  $("#postKec", "#list").html(html).focus();
+                  $("#postKec option:first-child", "#list").attr('selected', true);
+              }
+          });
+      });
+
+      $('#postKec').change(function() {
+          var value = $("#postKec").val().split(".");
+          var kd_provinsi = value[0];
+          var kd_kabupaten = value[1];
+          var kd_kecamatan = value[2];
+
+          $.ajax({
+              type: "POST",
+              dataType: "json",
+              data: {
+                  kd_provinsi: kd_provinsi,
+                  kd_kabupaten: kd_kabupaten,
+                  kd_kecamatan: kd_kecamatan
+              },
+              url: '<?php echo base_url('Web/getKelurahan'); ?>',
+              success: function(response) {
+                  html = '';
+                  for (i = 0; i < response.length; i++) {
+                      html += '<option value="' + response[i].kd_provinsi + '.' + response[i].kd_kabupaten + '.' + response[i].kd_kecamatan + '.' + response[i].kd_kelurahan + '">' + response[i].nm_kelurahan + '</option>';
+                  }
+                  $("#postKel", "#list2").html(html).focus();
+                  $("#postKel option:first-child", "#list2").attr('selected', true);
+              }
+          });
+      });
+
+      $('#postKab2').change(function() {
+          var value = $("#postKab2").val().split(".");
+          var kd_provinsi = value[0];
+          var kd_kabupaten = value[1];
+
+          $.ajax({
+              type: "POST",
+              dataType: "json",
+              data: {
+                  kd_provinsi: kd_provinsi,
+                  kd_kabupaten: kd_kabupaten
+              },
+              url: '<?php echo base_url('Web/getKecamatan'); ?>',
+              success: function(response) {
+                  console.log(response);
+
+                  html = '';
+                  for (i = 0; i < response.length; i++) {
+                      html += '<option value="' + response[i].kd_provinsi + '.' + response[i].kd_kabupaten + '.' + response[i].kd_kecamatan + '">' + response[i].nm_kecamatan + '</option>';
+                  }
+                  $("#postKec2", "#list3").html(html).focus();
+                  $("#postKec2 option:first-child", "#list3").attr('selected', true);
+              }
+          });
+      });
+
+      $('#postKec2').change(function() {
+          var value = $("#postKec2").val().split(".");
+          var kd_provinsi = value[0];
+          var kd_kabupaten = value[1];
+          var kd_kecamatan = value[2];
+
+          $.ajax({
+              type: "POST",
+              dataType: "json",
+              data: {
+                  kd_provinsi: kd_provinsi,
+                  kd_kabupaten: kd_kabupaten,
+                  kd_kecamatan: kd_kecamatan
+              },
+              url: '<?php echo base_url('Web/getKelurahan'); ?>',
+              success: function(response) {
+                  html = '';
+                  for (i = 0; i < response.length; i++) {
+                      html += '<option value="' + response[i].kd_provinsi + '.' + response[i].kd_kabupaten + '.' + response[i].kd_kecamatan + '.' + response[i].kd_kelurahan + '">' + response[i].nm_kelurahan + '</option>';
+                  }
+                  $("#postKel2", "#list4").html(html).focus();
+                  $("#postKel2 option:first-child", "#list4").attr('selected', true);
+              }
+          });
+      });
+
+      $('#postKab3').change(function() {
+          var value = $("#postKab3").val().split(".");
+          var kd_provinsi = value[0];
+          var kd_kabupaten = value[1];
+
+          $.ajax({
+              type: "POST",
+              dataType: "json",
+              data: {
+                  kd_provinsi: kd_provinsi,
+                  kd_kabupaten: kd_kabupaten
+              },
+              url: '<?php echo base_url('Web/getKecamatan'); ?>',
+              success: function(response) {
+                  console.log(response);
+
+                  html = '';
+                  for (i = 0; i < response.length; i++) {
+                      html += '<option value="' + response[i].kd_provinsi + '.' + response[i].kd_kabupaten + '.' + response[i].kd_kecamatan + '">' + response[i].nm_kecamatan + '</option>';
+                  }
+                  $("#postKec3", "#list5").html(html).focus();
+                  $("#postKec3 option:first-child", "#list5").attr('selected', true);
+              }
+          });
+      });
+
+      $('#postKec3').change(function() {
+          var value = $("#postKec3").val().split(".");
+          var kd_provinsi = value[0];
+          var kd_kabupaten = value[1];
+          var kd_kecamatan = value[2];
+
+          $.ajax({
+              type: "POST",
+              dataType: "json",
+              data: {
+                  kd_provinsi: kd_provinsi,
+                  kd_kabupaten: kd_kabupaten,
+                  kd_kecamatan: kd_kecamatan
+              },
+              url: '<?php echo base_url('Web/getKelurahan'); ?>',
+              success: function(response) {
+                  html = '';
+                  for (i = 0; i < response.length; i++) {
+                      html += '<option value="' + response[i].kd_provinsi + '.' + response[i].kd_kabupaten + '.' + response[i].kd_kecamatan + '.' + response[i].kd_kelurahan + '">' + response[i].nm_kelurahan + '</option>';
+                  }
+                  $("#postKel3", "#list6").html(html).focus();
+                  $("#postKel3 option:first-child", "#list6").attr('selected', true);
+              }
+          });
+      });
+
+      $('#postKab4').change(function() {
+          var value = $("#postKab4").val().split(".");
+          var kd_provinsi = value[0];
+          var kd_kabupaten = value[1];
+
+          $.ajax({
+              type: "POST",
+              dataType: "json",
+              data: {
+                  kd_provinsi: kd_provinsi,
+                  kd_kabupaten: kd_kabupaten
+              },
+              url: '<?php echo base_url('Web/getKecamatan'); ?>',
+              success: function(response) {
+                  console.log(response);
+
+                  html = '';
+                  for (i = 0; i < response.length; i++) {
+                      html += '<option value="' + response[i].kd_provinsi + '.' + response[i].kd_kabupaten + '.' + response[i].kd_kecamatan + '">' + response[i].nm_kecamatan + '</option>';
+                  }
+                  $("#postKec4", "#list7").html(html).focus();
+                  $("#postKec4 option:first-child", "#list7").attr('selected', true);
+              }
+          });
+      });
+
+      $('#postKec4').change(function() {
+          var value = $("#postKec4").val().split(".");
+          var kd_provinsi = value[0];
+          var kd_kabupaten = value[1];
+          var kd_kecamatan = value[2];
+
+          $.ajax({
+              type: "POST",
+              dataType: "json",
+              data: {
+                  kd_provinsi: kd_provinsi,
+                  kd_kabupaten: kd_kabupaten,
+                  kd_kecamatan: kd_kecamatan
+              },
+              url: '<?php echo base_url('Web/getKelurahan'); ?>',
+              success: function(response) {
+                  html = '';
+                  for (i = 0; i < response.length; i++) {
+                      html += '<option value="' + response[i].kd_provinsi + '.' + response[i].kd_kabupaten + '.' + response[i].kd_kecamatan + '.' + response[i].kd_kelurahan + '">' + response[i].nm_kelurahan + '</option>';
+                  }
+                  $("#postKel4", "#list8").html(html).focus();
+                  $("#postKel4 option:first-child", "#list8").attr('selected', true);
+              }
+          });
+      });
+
+      $('#postKab5').change(function() {
+          var value = $("#postKab5").val().split(".");
+          var kd_provinsi = value[0];
+          var kd_kabupaten = value[1];
+
+          $.ajax({
+              type: "POST",
+              dataType: "json",
+              data: {
+                  kd_provinsi: kd_provinsi,
+                  kd_kabupaten: kd_kabupaten
+              },
+              url: '<?php echo base_url('Web/getKecamatan'); ?>',
+              success: function(response) {
+                  console.log(response);
+
+                  html = '';
+                  for (i = 0; i < response.length; i++) {
+                      html += '<option value="' + response[i].kd_provinsi + '.' + response[i].kd_kabupaten + '.' + response[i].kd_kecamatan + '">' + response[i].nm_kecamatan + '</option>';
+                  }
+                  $("#postKec5", "#list9").html(html).focus();
+                  $("#postKec5 option:first-child", "#list9").attr('selected', true);
+              }
+          });
+      });
+
+      $('#postKec5').change(function() {
+          var value = $("#postKec5").val().split(".");
+          var kd_provinsi = value[0];
+          var kd_kabupaten = value[1];
+          var kd_kecamatan = value[2];
+
+          $.ajax({
+              type: "POST",
+              dataType: "json",
+              data: {
+                  kd_provinsi: kd_provinsi,
+                  kd_kabupaten: kd_kabupaten,
+                  kd_kecamatan: kd_kecamatan
+              },
+              url: '<?php echo base_url('Web/getKelurahan'); ?>',
+              success: function(response) {
+                  html = '';
+                  for (i = 0; i < response.length; i++) {
+                      html += '<option value="' + response[i].kd_provinsi + '.' + response[i].kd_kabupaten + '.' + response[i].kd_kecamatan + '.' + response[i].kd_kelurahan + '">' + response[i].nm_kelurahan + '</option>';
+                  }
+                  $("#postKel5", "#list10").html(html).focus();
+                  $("#postKel5 option:first-child", "#list10").attr('selected', true);
+              }
+          });
+      });
   </script>
   <!-- END PAGE SCRIPTS -->
 </body>

@@ -1,7 +1,7 @@
 <table border="0" width="100%">
   <tr>
     <td align="center">
-      <img src="img/logo2.png" alt="logo2" width="70">
+      <img src="img/logo.png" alt="logo2" width="60">
     </td>
     <td align="center">
       <b style="font-size:16px;">PANITIA PENERIAMAAN PESERTA DIDIK BARU (PPDB)</b> <br>
