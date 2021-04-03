@@ -1,4 +1,8 @@
 <header>
+    <?php
+    if (strtolower($this->uri->segment(1)) == 'logcs') {
+        $this->load->view('web/login');
+    } ?>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

@@ -62,7 +62,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Kegiatan -->
         <section class="container pt-3">
             <div class="container shadow-lg p-3 mb-5 bg-white rounded">
