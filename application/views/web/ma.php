@@ -32,10 +32,18 @@
       </div>
 
       <div class="col-md-4">
-        <h3 class="my-3">Madrasah Aliyah Darut Tafsir</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+        <h3 class="my-3 text-center">Madrasah Aliyah Darut Tafsir</h3>
+        <div class="card h-20" style="border: none; background:none">
+          <figure class="figure" style="width: 250px;display: block;margin: 0 auto;">
+            <img class="card-img-top rounded-circle" src="img/kepala_ma.jpeg" alt="">
+            <div>
+              <figcaption class="figure-caption text-center">KEPALA SEKOLAH MA</figcaption>
+              <!-- <h4 class="card-title" style="text-align:center; ;">DIVISI</h4> -->
+              <h4 class="card-title" style="text-align:center;font-size:16px;">Abdul Hakim S.Sos</h4>
+            </div>
+          </figure>
+        </div>
       </div>
-
     </div>
     <!-- /.row -->
     <div class="my-4">

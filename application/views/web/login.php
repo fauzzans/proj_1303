@@ -13,7 +13,7 @@
                     Login Administrasi Calon Siswa
                 </h4>
                 <div class="col-md-12">
-                    <p style="text-align: center;" class="text-success">Masukkan No. Pendaftaran dan Password yang diperoleh saat melakukan pendaftaran secara online.</p><br>
+                    <span class="text-success">Masukkan No. Pendaftaran dan Password yang diperoleh saat melakukan pendaftaran secara online.</span><br>
                 </div>
                 <div class="col-md-12" style="margin-top:20px">
                     <?php
@@ -28,9 +28,9 @@
                             <input type="password" name="password" class="inp" placeholder="NISN" required="true" />
                         </div>
                         <div class="row">
-                            <div class="col-xs-12  justify-content-between">
-                                <a href="" class="btn btn-success"><i class="fa fa-remove margin-r-5"></i> Tutup</a>
-                                <button type="submit" name="btnlogin" class="btn btn-success"><i class="fa fa-sign-in margin-r-5"></i> Login</button>
+                            <div class="col-xs-12">
+                                <a href="" style="color:#fff;float:left;" class="btn btn-success"><i class="fa fa-remove margin-r-5"></i> Tutup</a>
+                                <button type="submit" name="btnlogin" style="color:#fff;float:right;" class="btn btn-success"><i class="fa fa-sign-in margin-r-5"></i> Login</button>
                             </div><!-- /.col -->
                         </div>
                     </form>

@@ -16,6 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/modern-business.css" rel="stylesheet">
+    <!-- <link href="assets/css/freelancer.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/fontawesome.min.css"> -->
     <script src="https://kit.fontawesome.com/cf99f6a2e5.js" crossorigin="anonymous"></script>
 

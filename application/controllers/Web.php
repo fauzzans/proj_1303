@@ -39,6 +39,17 @@ class Web extends CI_Controller
 		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
 		$this->load->view('web/berita_post', $data);
 	}
+	public function berita_post_1()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/berita_post_1', $data);
+	}
+
+	public function berita_post_2()
+	{
+		$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
+		$this->load->view('web/berita_post_2', $data);
+	}
 
 	public function kegiatan()
 	{
@@ -120,7 +131,7 @@ class Web extends CI_Controller
 
 		if (isset($_POST['btndaftar'])) {
 			$this->db->order_by('id_siswa', 'DESC');
-			$sql 		= $this->db->get('tbl_siswa');
+			$sql 		= $this->db->get('calon_siswa');
 			if ($sql->num_rows() == 0) {
 				$no_pendaftaran   = "PSB18004001";
 			} else {
@@ -216,7 +227,7 @@ class Web extends CI_Controller
 				'rayonisasi'				=> $rayonisasi,
 				'tgl_siswa'				  => $tgl_siswa
 			);
-			$this->db->insert('tbl_siswa', $data);
+			$this->db->insert('calon_siswa', $data);
 
 			for ($i = 1; $i <= 5; $i++) {
 				if ($i == 1) {
@@ -332,7 +343,7 @@ class Web extends CI_Controller
 				$pass	   = $_POST['password'];
 
 				$this->db->like('tgl_siswa', date('Y'), "after");
-				$query  = $this->db->get_where('tbl_siswa', "no_pendaftaran='$username'");
+				$query  = $this->db->get_where('calon_siswa', "no_pendaftaran='$username'");
 				$cek    = $query->result();
 				$cekun  = $cek[0]->no_pendaftaran;
 				$jumlah = $query->num_rows();

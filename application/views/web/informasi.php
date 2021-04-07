@@ -26,18 +26,7 @@
             <hr>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                    <div class="card h-80" style="width: 250px;border: none;">
-                        <img class="card-img-top rounded-circle" src="img/ava.jpg" alt="">
-                        <div>
-                            <h4 class="card-title" style="text-align:center; color:#147139;">Nama</h4>
-                            <div>
-                                <h4 class="card-title" style="text-align:center;">Pimpinan PP Darut Tafsir</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                    <div class="card h-80" style="width: 250px;border: none;">
+                    <div class="card h-80" style="width: 250px;border: none;display:none">
                         <img class="card-img-top rounded-circle" src="img/ava.jpg" alt="">
                         <div>
                             <h4 class="card-title" style="text-align:center; color:#147139;">Nama</h4>
@@ -49,17 +38,28 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-80" style="width: 250px;border: none;">
-                        <img class="card-img-top rounded-circle" src="img/ava.jpg" alt="">
+                        <img class="card-img-top rounded-circle" src="img/pimpinan.jpeg" alt="">
                         <div>
-                            <h4 class="card-title" style="text-align:center; color:#147139;">Nama</h4>
+                            <h4 class="card-title" style="font-size:15px;text-align:center; color:#147139;margin-top:10px;">Ust.Nadjib Istichori</h4>
                             <div>
-                                <h4 class="card-title" style="text-align:center;">Sekretaris </h4>
+                                <h4 class="card-title" style="text-align:center;font-size:13px;">Pimpinan PP Darut Tafsir</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                     <div class="card h-80" style="width: 250px;border: none;">
+                        <img class="card-img-top rounded-circle" src="img/sekertaris.jpeg" alt="">
+                        <div>
+                            <h4 class="card-title" style="font-size:15px;text-align:center; color:#147139;margin-top:10px;">Drs. H. Abdul Muis Istichori</h4>
+                            <div>
+                                <h4 class="card-title" style="text-align:center;font-size:13px;">Sekretaris</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                    <div class="card h-80" style="width: 250px;border: none;display:none">
                         <img class="card-img-top rounded-circle" src="img/ava.jpg" alt="">
                         <div>
                             <h4 class="card-title" style="text-align:center; color:#147139;">Nama</h4>
@@ -123,11 +123,11 @@
                         <div>
                             <div class="card h-20" style="border: none;">
                                 <figure class="figure" style="width: 250px;display: block;margin: 0 auto;">
-                                    <img class="card-img-top rounded-circle" src="img/ava1.jpg" alt="">
+                                    <img class="card-img-top rounded-circle" src="img/divisiit.jpeg" alt="">
                                     <div>
                                         <figcaption class="figure-caption text-center">DIVISI IT</figcaption>
                                         <!-- <h4 class="card-title" style="text-align:center; ;">DIVISI</h4> -->
-                                        <h4 class="card-title" style="text-align:center;">Muhammad Fauzi S.T</h4>
+                                        <h4 class="card-title" style="text-align:center;font-size:16px;">Muhammad Fauzi S.T M.Pd</h4>
                                     </div>
                                 </figure>
                             </div>

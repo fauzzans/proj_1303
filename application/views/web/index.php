@@ -106,48 +106,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 portfolio-item">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="img/format-brosur-01.jpg" alt="Penerimaan Santri Baru 2021/2022">
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="<?php echo site_url('web/berita_post') ?>">Penerimaan Santri Baru 2021/2022</a>
-                                    </h4>
-                                    <p class="card-text"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="img/galeri/galeri13.jpg" alt="">
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Peringatan Tahun Baru Islam 1442H</a>
-                                    </h4>
-                                    <p class="card-text"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="img/galeri/galeri12.jpg" alt="">
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Kegiatan Muhadharah Santri Putri</a>
-                                    </h4>
-                                    <p class="card-text"></p>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-xs-6 col-xs-offset-3" style="float:none;margin:auto;">
                             <a href="<?php echo site_url('Web/kegiatan') ?>" class="btn btn-success btn-lg" style="width:250px;margin:15px;">LEBIH BANYAK</a>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <!-- Berita -->
 
@@ -161,7 +125,7 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <div class="card h-100">
                                 <img class="card-img-top" src="img/format-brosur-01.jpg" alt="Penerimaan Santri Baru 2021/2022">
                                 <div class="card-body">
@@ -172,93 +136,34 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+                        <div class="col-lg-4 col-md-6 portfolio-item">
                             <div class="card h-100">
-                                <img class="card-img-top" src="img/galeri/galeri13.jpg" alt="">
+                                <img class="card-img-top" src="img/disinfektan.jpg" alt="" style="display: flex;">
                                 <div class="card-body">
                                     <h4 class="card-title">
-                                        <a href="#">Peringatan Tahun Baru Islam 1442H</a>
+                                        <a href="<?php echo site_url('web/berita_post_1') ?>">Kecamatan Ciampea Lakukan Penyemprotan Disinfektan di Dua Pondok Pesantren</a>
                                     </h4>
                                     <p class="card-text"></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="img/galeri/galeri12.jpg" alt="">
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Kegiatan Muhadharah Santri Putri</a>
-                                    </h4>
-                                    <p class="card-text"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="img/galeri/galeri12.jpg" alt="">
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Kegiatan Muhadharah Santri Putri</a>
-                                    </h4>
-                                    <p class="card-text"></p>
-                                </div>
+                        <div class="col-lg-4 col-md-6 portfolio-item" <div class="card h-100">
+                            <img class="card-img-top" src="img/galeri/galeri12.jpg" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">Kegiatan Muhadharah Santri Putri</a>
+                                </h4>
+                                <p class="card-text"></p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="img/format-brosur-01.jpg" alt="Penerimaan Santri Baru 2021/2022">
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="<?php echo site_url('web/berita_post') ?>">Penerimaan Santri Baru 2021/2022</a>
-                                    </h4>
-                                    <p class="card-text"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="img/galeri/galeri13.jpg" alt="">
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Peringatan Tahun Baru Islam 1442H</a>
-                                    </h4>
-                                    <p class="card-text"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="img/galeri/galeri12.jpg" alt="">
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Kegiatan Muhadharah Santri Putri</a>
-                                    </h4>
-                                    <p class="card-text"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="img/galeri/galeri12.jpg" alt="">
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Kegiatan Muhadharah Santri Putri</a>
-                                    </h4>
-                                    <p class="card-text"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-xs-offset-3" style="float:none;margin:auto;">
-                            <a href="<?php echo site_url('Web/berita') ?>" class="btn btn-success btn-lg" style="width:250px;margin:15px;">LEBIH BANYAK</a>
-                        </div>
+                    <div class="col-xs-6 col-xs-offset-3" style="float:none;margin:auto;">
+                        <a href="<?php echo site_url('Web/berita') ?>" class="btn btn-success btn-lg" style="width:250px;margin:15px;">LEBIH BANYAK</a>
                     </div>
                 </div>
-        </section>
+            </div>
+    </div>
+    </section>
     </div>
 
 

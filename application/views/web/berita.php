@@ -35,33 +35,37 @@
             <a href="<?php echo site_url('Web/berita_post') ?>" class="btn btn-primary">Selengkapnya &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2017 by
+            Posted on April 5, 2021 by
             <a href="#">pondokpesantrendaruttafsir</a>
           </div>
         </div>
 
         <div class="card mb-4">
-          <img class="card-img-top" src="img/format-brosur-01.jpg" alt="Card image cap">
+          <img class="card-img-top" src="img/disinfektan1.jpg" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">PPDB 2021/2022</h2>
-            <p class="card-text">Penerimaan santri baru tahun ajaran 2021/202</p>
-            <a href="<?php echo site_url('Web/berita_post') ?>" class="btn btn-primary">Selengkapnya &rarr;</a>
+            <h2 class="card-title">Kecamatan Ciampea Lakukan Penyemprotan Disinfektan di Dua Pondok Pesantren</h2>
+            <p class="card-text">
+            <p><strong>DIKUTIP DARI</strong> <strong>headlinebogor.com</strong> – Pemerintah Kecamatan Ciampea, Kabupaten Bogor kembali melakukan penyemprotan disinfektan di 4 titik pondok pesantren dan Mesjid Raya, dua wilayah Desa Bojong Rangkas dan Cibanteng yang dipimpin langsung Camat Ciampea serta dampingi Kepala Desa di dua lokasi, Desa Bojong Rangkas dan Cibanteng, Kecamatan Ciampea, kabupaten Bogor. (1/4).</p>
+            </p>
+            <a href="<?php echo site_url('Web/berita_post_1') ?>" class="btn btn-primary">Selengkapnya &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2017 by
+            Posted on April 5, 2021 by
             <a href="#">pondokpesantrendaruttafsir</a>
           </div>
         </div>
 
         <div class="card mb-4">
-          <img class="card-img-top" src="img/format-brosur-01.jpg" alt="Card image cap">
+          <img class="card-img-top" src="img/stafsus.jpeg" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">PPDB 2021/2022</h2>
-            <p class="card-text">Penerimaan santri baru tahun ajaran 2021/202</p>
-            <a href="<?php echo site_url('Web/berita_post') ?>" class="btn btn-primary">Selengkapnya &rarr;</a>
+            <h2 class="card-title">Silaturahmi Staf Khusus Presiden RI Dengan Pimpinan PP. Darut Tafsir Ciampea Bogor.</h2>
+            <p class="card-text">
+            <p><strong>POLRES BOGOR – </strong>Silaturahmi Staf Khusus Presiden RI Dengan Pimpinan PP. Darut Tafsir Ciampea Bogor Dan Distribusi Bantuan Untuk Pencegahan Penyebaran Covid 19 Di Lingkungan Pesantren.</p>
+            </p>
+            <a href="<?php echo site_url('Web/berita_post_2') ?>" class="btn btn-primary">Selengkapnya &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2017 by
+            Posted on April 5, 2021 by
             <a href="#">pondokpesantrendaruttafsir</a>
           </div>
         </div>
