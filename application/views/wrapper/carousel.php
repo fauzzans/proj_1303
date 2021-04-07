@@ -1,4 +1,4 @@
-<header style="height: 500px">
+<header>
     <?php
     if (strtolower($this->uri->segment(1)) == 'logcs') {
         $this->load->view('web/login');
@@ -9,7 +9,7 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner" role="listbox" style="height: 500px">
+        <div class="carousel-inner" role="listbox">
             <!-- Slide One - Set the background image for this slide in the line below -->
             <div class="carousel-item active" style="background-image: url('img/background/bg_header2.jpg')">
                 <div class="carousel-caption d-none d-md-block">
