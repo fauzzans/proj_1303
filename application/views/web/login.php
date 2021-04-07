@@ -1,4 +1,4 @@
-<div class="layer"></div>
+<div class="layer" style="margin-top: 22px"></div>
 <div class="obox">
     <div class="row">
         <div class="col-lg-12">
@@ -28,10 +28,12 @@
                             <input type="password" name="password" class="inp" placeholder="NISN" required="true" />
                         </div>
                         <div class="row">
-                            <div class="col-xs-12  justify-content-between">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-5  justify-content-between" style="padding-left: 0px">
                                 <a href="" class="btn btn-success"><i class="fa fa-remove margin-r-5"></i> Tutup</a>
                                 <button type="submit" name="btnlogin" class="btn btn-success"><i class="fa fa-sign-in margin-r-5"></i> Login</button>
                             </div><!-- /.col -->
+                            <div class="col-md-3"></div>
                         </div>
                     </form>
                 </div>
