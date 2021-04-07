@@ -43,10 +43,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo site_url('Web/informasi') ?>">Informasi</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
 
                     <a class="nav-link" href="logcs">Login</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
