@@ -14,35 +14,46 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
+    <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">
     </h1>
+    <section class="container pt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 style="text-align:center;margin-top:20px;">MADRASAH ALIYAH DARUT TAFSIR</h2>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 portfolio-item" style="width: 200px;">
 
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="<?php echo site_url('index.php') ?>">Home</a>
-      </li>
-      <li class="breadcrumb-item active">Madrasah Aliyah</li>
-    </ol>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item" style="width: 500px;">
+              <div class="card h-20" style="border: none; background:none">
+                <figure class="figure">
+                  <img class="card-img-top rounded-circle" src="img/kepala_ma.jpeg" alt="">
+                  <div>
+                    <h4 class="card-title" style="font-size:15px;text-align:center; color:#147139;margin-top:10px;">Abdul Hakim S.Sos</h4>
+                    <div>
+                      <h4 class="card-title" style="text-align:center;font-size:13px;">Kepala Sekolah MA Darut Tafsir</h4>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item" style="width: 200px;">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Portfolio Item Row -->
     <div class="row">
-
-      <div class="col-md-8">
+      <div class="col-md-12">
         <img class="img-fluid" src="img/galeri/ma.jpg" alt="">
-      </div>
-
-      <div class="col-md-4">
-        <h3 class="my-3 text-center">Madrasah Aliyah Darut Tafsir</h3>
-        <div class="card h-20" style="border: none; background:none">
-          <figure class="figure" style="width: 250px;display: block;margin: 0 auto;">
-            <img class="card-img-top rounded-circle" src="img/kepala_ma.jpeg" alt="">
-            <div>
-              <figcaption class="figure-caption text-center">KEPALA SEKOLAH MA</figcaption>
-              <!-- <h4 class="card-title" style="text-align:center; ;">DIVISI</h4> -->
-              <h4 class="card-title" style="text-align:center;font-size:16px;">Abdul Hakim S.Sos</h4>
-            </div>
-          </figure>
-        </div>
       </div>
     </div>
     <!-- /.row -->

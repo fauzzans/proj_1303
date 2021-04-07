@@ -138,7 +138,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 portfolio-item">
                             <div class="card h-100">
-                                <img class="card-img-top" src="img/disinfektan.jpg" alt="" style="display: flex;">
+                                <img class="card-img-top" src="img/thumb/disinfektan1.jpg" alt="" style="display: flex;">
                                 <div class="card-body">
                                     <h4 class="card-title">
                                         <a href="<?php echo site_url('web/berita_post_1') ?>">Kecamatan Ciampea Lakukan Penyemprotan Disinfektan di Dua Pondok Pesantren</a>
@@ -147,23 +147,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item" <div class="card h-100">
-                            <img class="card-img-top" src="img/galeri/galeri12.jpg" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a href="#">Kegiatan Muhadharah Santri Putri</a>
-                                </h4>
-                                <p class="card-text"></p>
+                        <div class="col-lg-4 col-md-6 portfolio-item">
+                            <div class="card h-100">
+                                <img class="card-img-top" src="img/thumb/stafsus.jpeg" alt="">
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="<?php echo site_url('web_berita_post_2') ?>">SILATURAHMI STAF KHUSUS PRESIDEN RI DENGAN PIMPINAN PP. DARUT TAFSIR CIAMPEA BOGOR.</a>
+                                    </h4>
+                                    <p class="card-text"></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-6 col-xs-offset-3" style="float:none;margin:auto;">
-                        <a href="<?php echo site_url('Web/berita') ?>" class="btn btn-success btn-lg" style="width:250px;margin:15px;">LEBIH BANYAK</a>
+                        <div class="col-xs-6 col-xs-offset-3" style="float:none;margin:auto;">
+                            <a href="<?php echo site_url('Web/berita') ?>" class="btn btn-success btn-lg" style="width:250px;margin:15px;">LEBIH BANYAK</a>
+                        </div>
                     </div>
                 </div>
             </div>
-    </div>
-    </section>
+        </section>
     </div>
 
 
